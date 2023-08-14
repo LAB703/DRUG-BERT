@@ -123,7 +123,7 @@ with st.spinner('Updating Report...'):
                  )
               , cells = dict(
                   values = [whdf[K].tolist() for K in whdf.columns], 
-                  font=dict(size=12),
+                  font=dict(size=12, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
                   line_color = 'rgba(255,255,255,0.2)',
@@ -154,7 +154,7 @@ with st.spinner('Updating Report...'):
                  )
               , cells = dict(
                   values = [cwdf[K].tolist() for K in cwdf.columns], 
-                  font=dict(size=12),
+                  font=dict(size=12, color='black'),
                   align = 'left',
                   fill_color='#F0F2F6',
                   height=20))]) 
@@ -192,7 +192,7 @@ with st.expander("Previous Performance"):
                  )
               , cells = dict(
                   values = [hhc24[K].tolist() for K in hhc24.columns], 
-                  font=dict(size=10),
+                  font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
                   line_color = 'rgba(255,255,255,0.2)', 
@@ -230,7 +230,7 @@ with st.expander("Previous Performance"):
                  )
               , cells = dict(
                   values = [hhc[K].tolist() for K in hhc.columns], 
-                  font=dict(size=10),
+                  font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
                   line_color = 'rgba(255,255,255,0.2)',
