@@ -15,11 +15,11 @@ t1, t2 = st.columns((4,6))
 
 t1.image('images/Korean_National_Police_Agency_Emblem.png', width = 120)
 
-t2.title("         SNS 불법 마약 거래 모니터링 시스템")
+t2.title("SNS 불법 마약 거래 모니터링 시스템")
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
 
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📈 전체", "🐦 트위터", "📨 텔레그램", "🌌 DC인사이드",  "💀 다크웹",  "🏴‍☠️ 다크웹2"])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📈 전체", "🐦 트위터", "📨 텔레그램", "🌌 DC인사이드",  "💀 다크웹",  "🏴‍☠️ 다크웹2"])
 
 ## Data
 
@@ -28,7 +28,7 @@ with st.spinner('Updating Report...'):
     #Metrics setting and rendering
 
     hosp_df = pd.read_excel('DataforMock.xlsx',sheet_name = 'Hospitals')
-    hosp = st.selectbox('Choose Hospital', hosp_df, help = 'Filter report to show only one hospital')
+    hosp = st.selectbox('Choose keyword', hosp_df, help = 'Filter report to show only one hospital')
     
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
