@@ -13,7 +13,7 @@ st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='�
 
 t1, t2 = st.columns((4,6)) 
 
-t1.image('images/Korean_National_Police_Agency_Emblem.png', width = 120)
+t1.image('images/Korean_National_Police_Agency_Emblem.png', width = 90)
 
 t2.title("SNS 불법 마약 거래 모니터링 시스템")
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
