@@ -23,7 +23,7 @@ t2.title("         SNS 불법 마약 거래 모니터링 시스템")
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
 
 
-tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📈 전체", "🐦 트위터", "📨 텔레그램", "🌌 DC인사이드",  "💀 다크웹",  "🏴‍☠️ 다크웹2"])
 
 ## Data
 
