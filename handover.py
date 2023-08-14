@@ -129,7 +129,7 @@ with st.spinner('Updating Report...'):
                   line_color = 'rgba(255,255,255,0.2)',
                   height=20))])
      
-    fig.update_layout(title_text="Current Waiting Handovers",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)                                                           
+    fig.update_layout(title_text="Current Waiting Handovers",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)                                                           
         
     cw1.plotly_chart(fig, use_container_width=True)    
     
@@ -159,7 +159,7 @@ with st.spinner('Updating Report...'):
                   fill_color='#F0F2F6',
                   height=20))]) 
         
-    fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
+    fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
         
     cw2.plotly_chart(fig, use_container_width=True)
        
@@ -198,7 +198,7 @@ with st.expander("Previous Performance"):
                   line_color = 'rgba(255,255,255,0.2)', 
                   height=20))])
      
-    fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
+    fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
     
     st.plotly_chart(fig, use_container_width=True)      
     
@@ -236,7 +236,7 @@ with st.expander("Previous Performance"):
                   line_color = 'rgba(255,255,255,0.2)',
                   height=20))])
      
-    fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
+    fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
     
     p1.plotly_chart(fig, use_container_width=True)  
     
@@ -266,7 +266,7 @@ with st.expander("Previous Performance"):
                   fill_color='#F0F2F6',
                   height=20))])
         
-    fig.update_layout(title_text="Longest Completed Handovers",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)
+    fig.update_layout(title_text="Longest Completed Handovers",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)
         
     p2.plotly_chart(fig, use_container_width=True)
 
