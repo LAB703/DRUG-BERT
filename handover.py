@@ -38,8 +38,8 @@ with st.spinner('Updating Report...'):
     hl = todf[(todf['Hospital Attended']==hosp) & (todf['Metric']== 'Hours Lost to Handovers Over 15 Mins')]
     
     m1.write('')
-    m2.metric(label ='전날 대비 증가량',value = int(to['Value']), delta = str(int(to['Previous']))+', 전날 대비', delta_color = 'inverse')
-    m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" Mins", delta = str(int(ch['Previous']))+', 1분전', delta_color = 'inverse')
+    m2.metric(label ='전날 대비 증가량',value = int(to['Value'])+' 건', delta = str(int(to['Previous']))+', 전날 대비', delta_color = 'inverse')
+    m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" 분전", delta = str(int(ch['Previous']))+', 1분전', delta_color = 'inverse')
     m4.metric(label = '위험도 제일 높은 글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 3일전')
     m1.write('')
      
