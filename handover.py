@@ -19,10 +19,11 @@ st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide', page_ic
 t1, t2 = st.columns((0.07,1)) 
 
 t1.image('images/Korean_National_Police_Agency_Emblem.png', width = 120)
-t2.title("      SNS 불법 마약 거래 모니터링 시스템")
+t2.title("         SNS 불법 마약 거래 모니터링 시스템")
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
 
 
+tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
 
 ## Data
 
@@ -262,15 +263,15 @@ with st.expander("Previous Performance"):
     p2.plotly_chart(fig, use_container_width=True)
 
 
-# Contact Form
+# # Contact Form
 
-with st.expander("Contact us"):
-    with st.form(key='contact', clear_on_submit=True):
+# with st.expander("Contact us"):
+#     with st.form(key='contact', clear_on_submit=True):
         
-        email = st.text_input('Contact Email')
-        st.text_area("Query","Please fill in all the information or we may not be able to process your request")  
+#         email = st.text_input('Contact Email')
+#         st.text_area("Query","Please fill in all the information or we may not be able to process your request")  
         
-        submit_button = st.form_submit_button(label='Send Information')
+#         submit_button = st.form_submit_button(label='Send Information')
         
         
         
