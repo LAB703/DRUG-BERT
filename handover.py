@@ -11,7 +11,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 
-st.set_page_config(page_title='SWAST - Handover Delays',  layout='wide', page_icon=':ambulance:')
+st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='🚔')
 
 #this is the header
  
@@ -50,9 +50,9 @@ with st.spinner('Updating Report...'):
     hl = todf[(todf['Hospital Attended']==hosp) & (todf['Metric']== 'Hours Lost to Handovers Over 15 Mins')]
     
     m1.write('')
-    m2.metric(label ='전날 대비 증가량',value = int(to['Value']), delta = str(int(to['Previous']))+' 전날 대비', delta_color = 'inverse')
-    m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" Mins", delta = str(int(ch['Previous']))+' 1분전', delta_color = 'inverse')
-    m4.metric(label = '위험도 제일 높은 글',value = str(int(hl['Value']))+" 이겁니다", delta = str(int(hl['Previous']))+' ㅎㅎ')
+    m2.metric(label ='전날 대비 증가량',value = int(to['Value']), delta = str(int(to['Previous']))+', 전날 대비', delta_color = 'inverse')
+    m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" Mins", delta = str(int(ch['Previous']))+', 1분전', delta_color = 'inverse')
+    m4.metric(label = '위험도 제일 높은 글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 3일전')
     m1.write('')
      
     # Number of Completed Handovers by Hour
