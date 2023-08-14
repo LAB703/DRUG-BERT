@@ -114,7 +114,7 @@ with st.spinner('Updating Report...'):
             data = [go.Table (columnorder = [0,1,2,3,4,5,6,7,8,9], columnwidth = [30,10,10,10,10,15,15,15,15,15],
                 header = dict(
                  values = list(whdf.columns),
-                 font=dict(size=12, color = 'white'),
+                 font=dict(size=12, color = 'black'),
                  fill_color = '#264653',
                  line_color = 'rgba(255,255,255,0.2)',
                  align = ['left','center'],
@@ -147,7 +147,7 @@ with st.spinner('Updating Report...'):
             data = [go.Table (columnorder = [0,1,2,3], columnwidth = [15,40,20,20],
                 header = dict(
                  values = list(cwdf.columns),
-                 font=dict(size=12, color = 'white'),
+                 font=dict(size=12, color = 'black'),
                  fill_color = '#264653',
                  align = 'left',
                  height=20
@@ -183,7 +183,7 @@ with st.expander("Previous Performance"):
             data = [go.Table (columnorder = [0,1,2,3,4,5,6,7,8,9,10,11,12], columnwidth = [18,12],
                 header = dict(
                  values = list(hhc24.columns),
-                 font=dict(size=11, color = 'white'),
+                 font=dict(size=11, color = 'black'),
                  fill_color = '#264653',
                  line_color = 'rgba(255,255,255,0.2)',
                  align = ['left','center'],
@@ -221,7 +221,7 @@ with st.expander("Previous Performance"):
             data = [go.Table (columnorder = [0,1,2,3,4,5,6,7,8,9,10,11,12], columnwidth = [18,12],
                 header = dict(
                  values = list(hhc.columns),
-                 font=dict(size=11, color = 'white'),
+                 font=dict(size=11, color = 'black'),
                  fill_color = '#264653',
                  line_color = 'rgba(255,255,255,0.2)',
                  align = ['left','center'],
@@ -254,7 +254,7 @@ with st.expander("Previous Performance"):
                 data = [go.Table (columnorder = [0,1,2,3,4], columnwidth = [10,35,20,20,10],
                                   header = dict(
                                       values = list(lch.columns),
-                                      font=dict(size=12, color = 'white'),
+                                      font=dict(size=12, color = ' black'),
                                       fill_color = '#264653',
                                       align = 'left',
                                       height=20
