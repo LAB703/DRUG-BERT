@@ -173,7 +173,7 @@ with st.expander("Previous Performance"):
                  values = list(hhc24.columns),
                  font=dict(size=11, color = 'white'),
                  fill_color = '#264653',
-                 line_color = 'rgba(255,255,255,0.2)',
+                 line_color = '#4653FF',
                  align = ['left','center'],
                  #text wrapping
                  height=20
@@ -183,7 +183,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'rgba(255,255,255,0.2)', 
+                  line_color = '#4653FF', 
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
@@ -211,7 +211,7 @@ with st.expander("Previous Performance"):
                  values = list(hhc.columns),
                  font=dict(size=11, color = 'white'),
                  fill_color = '#264653',
-                 line_color = 'rgba(255,255,255,0.2)',
+                 line_color = '#4653FF',
                  align = ['left','center'],
                  #text wrapping
                  height=20
@@ -221,7 +221,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'rgba(255,255,255,0.2)',
+                  line_color = '#4653FF',
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
