@@ -274,7 +274,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'white', 
+                  line_color = '#4653FF', 
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
@@ -312,7 +312,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'white',
+                  line_color = '#4653FF',
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
