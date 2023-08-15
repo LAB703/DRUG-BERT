@@ -229,7 +229,7 @@ with st.spinner('Updating Report...'):
                   values = [cwdf[K].tolist() for K in cwdf.columns], 
                   font=dict(size=12, color='black'),
                   align = 'left',
-                  fill_color='#F0F2F6',
+                  fill_color='#264653',
                   height=20))]) 
         
     fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
@@ -268,7 +268,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = '#4653FF', 
+                  line_color = 'white', 
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
@@ -306,7 +306,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = '#4653FF',
+                  line_color = 'while',
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
