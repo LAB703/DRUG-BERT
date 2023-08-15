@@ -43,8 +43,7 @@ code {
 #root > div:nth-child(1) > div > div > a {
     visibility:hidden;
 }    
-    
-    
+
 div.stButton > button:first-child {
 font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   font-size:100%;
@@ -65,6 +64,10 @@ button.css-jgupqz.e10mrw3y2 {
     border-radius: 0.75rem;
     transform: scale(0);
 }
+
+butto.css-qjjohw ef3psqc4 {
+display:none;
+}
 div.viewerBadge_link__1S137 {
     display:none;
     background-color: #C0504D;
@@ -83,6 +86,10 @@ a.viewerBadge_container__1QSob {
 div.streamlit-expanderHeader.st-ae.st-bq.st-ag.st-ah.st-ai.st-aj.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-as.st-at.st-by.st-bz.st-c0.st-c1.st-c2.st-b4.st-c3.st-c4.st-c5.st-b5.st-c6.st-c7.st-c8.st-c9 {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     font-weight: 200;
+}
+
+div.css-1dp5vir ezrtsby1 {
+    background-color: #C0504D;
 }
 </style>
 '''
