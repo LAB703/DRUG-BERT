@@ -91,6 +91,9 @@ div.streamlit-expanderHeader.st-ae.st-bq.st-ag.st-ah.st-ai.st-aj.st-br.st-bs.st-
 
 st.markdown(hide_menu, unsafe_allow_html=True)
 
+st.sidebar.success("Select a demo above.")
+
+
 #this is the header
 
 t1, t2 = st.columns((4,6)) 
