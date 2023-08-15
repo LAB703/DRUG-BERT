@@ -65,9 +65,6 @@ button.css-jgupqz.e10mrw3y2 {
     transform: scale(0);
 }
 
-button.css-qjjohw ef3psqc4 {
-display:none;
-}
 div.viewerBadge_link__1S137 {
     display:none;
     background-color: #C0504D;
@@ -76,9 +73,6 @@ div.css-j7qwjs.e1fqkh3o5 {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
-div.css-q16mip e3g6aar0 {
-    display:none:
-}
 a.viewerBadge_container__1QSob {
     z-index: 50;
     font-size: .875rem;
