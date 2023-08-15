@@ -100,7 +100,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)
 
 t1, t2 = st.columns((4,6)) 
 # Korean_National_Police_Agency_Emblem
-t1.image('images/index.png', width = 90)
+t1.image('images/index.png', width = 120)
 
 t2.title("SNS 불법 마약 거래 모니터링 시스템")
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
@@ -115,7 +115,7 @@ with st.spinner('Updating Report...'):
     #Metrics setting and rendering
 
     hosp_df = pd.read_excel('DataforMock.xlsx',sheet_name = 'Hospitals')
-    hosp = st.selectbox('Choose keyword😀', hosp_df, help = 'Filter report to show only one hospital')
+    hosp = st.selectbox('Choose keyword', hosp_df, help = 'Filter report to show only one hospital')
     
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
