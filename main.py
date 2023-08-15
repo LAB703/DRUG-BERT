@@ -92,8 +92,8 @@ st.markdown(hide_menu, unsafe_allow_html=True)
 #this is the header
 
 t1, t2 = st.columns((4,6)) 
-# Korean_National_Police_Agency_Emblem
-t1.image('images/index.png', width = 90)
+
+t1.image('images/Korean_National_Police_Agency_Emblem.png', width = 90)
 
 t2.title("SNS 불법 마약 거래 모니터링 시스템")
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
@@ -348,8 +348,5 @@ with st.expander("Previous Performance"):
 #         st.text_area("Query","Please fill in all the information or we may not be able to process your request")  
         
 #         submit_button = st.form_submit_button(label='Send Information')
-        
-        
-        
         
         
