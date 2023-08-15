@@ -86,9 +86,6 @@ div.streamlit-expanderHeader.st-ae.st-bq.st-ag.st-ah.st-ai.st-aj.st-br.st-bs.st-
     font-weight: 200;
 }
 
-div.css-1dp5vir ezrtsby1 {
-    background-color: #C0504D;
-}
 </style>
 '''
 
