@@ -274,7 +274,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = '#4653FF', 
+                  line_color = 'white', 
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
@@ -312,7 +312,7 @@ with st.expander("Previous Performance"):
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = '#4653FF',
+                  line_color = 'white',
                   height=20))])
      
     fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
@@ -334,7 +334,7 @@ with st.expander("Previous Performance"):
                                   header = dict(
                                       values = list(lch.columns),
                                       font=dict(size=12, color = ' white'),
-                                      fill_color = '#264653',
+                                      fill_color = '#4653FF',
                                       align = 'left',
                                       height=20
                                           )
@@ -342,7 +342,7 @@ with st.expander("Previous Performance"):
                   values = [lch[K].tolist() for K in lch.columns], 
                   font=dict(size=11, color='black'),
                   align = 'left',
-                  fill_color='#F0F2F6',
+                  fill_color='white',
                   height=20))])
         
     fig.update_layout(title_text="Longest Completed Handovers",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)
