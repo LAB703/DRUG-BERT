@@ -11,7 +11,7 @@ st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='�
 
 hide_decoration_bar_style = '''
     <style>
-        header {visibility: hidden;}
+        stToolbar {visibility: hidden;}
     </style>
 '''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
