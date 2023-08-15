@@ -104,7 +104,7 @@ with st.spinner('Updating Report...'):
                  values = list(whdf.columns),
                  font=dict(size=12, color = 'white'),
                  fill_color = '#264653',
-                 line_color = 'rgba(255,255,255,0.2)',
+                 line_color = '#4653FF',
                  align = ['left','center'],
                  #text wrapping
                  height=20
@@ -114,7 +114,7 @@ with st.spinner('Updating Report...'):
                   font=dict(size=12, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'rgba(255,255,255,0.2)',
+                  line_color = '#4653FF',
                   height=20))])
      
     fig.update_layout(title_text="Current Waiting Handovers",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)                                                           
