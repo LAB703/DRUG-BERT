@@ -102,7 +102,7 @@ t1, t2, t3 = st.columns((2,5,3))
 t1.image('images/index.png', width = 120)
 
 t2.title("SNS 불법 마약 거래 모니터링 시스템")
-t3.write(f'{time.strftime('%c', time.localtime(time.time()))}')
+t3.write(time.strftime('%c', time.localtime(time.time())))
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
 
 
