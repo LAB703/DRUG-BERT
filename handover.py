@@ -65,7 +65,7 @@ button.css-jgupqz.e10mrw3y2 {
     transform: scale(0);
 }
 
-butto.css-qjjohw ef3psqc4 {
+button.css-qjjohw ef3psqc4 {
 display:none;
 }
 div.viewerBadge_link__1S137 {
