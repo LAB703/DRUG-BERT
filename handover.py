@@ -119,7 +119,7 @@ with st.spinner('Updating Report...'):
     #Metrics setting and rendering
 
     hosp_df = pd.read_excel('DataforMock.xlsx',sheet_name = 'Hospitals')
-    hosp = st.selectbox('Choose keyword', hosp_df, help = 'Filter report to show only one hospital')
+    hosp = st.selectbox('Choose keyword', hosp_df, help = 'Filter report to show only one hospital')
     
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
