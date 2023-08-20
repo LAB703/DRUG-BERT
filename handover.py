@@ -67,6 +67,10 @@ button.css-jgupqz.e10mrw3y2 {
     transform: scale(0);
 }
 
+button.css-qjjohw {
+    display: NONE;
+}
+
 div.viewerBadge_link__1S137 {
     display:none;
     background-color: #C0504D;
