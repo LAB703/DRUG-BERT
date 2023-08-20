@@ -14,4 +14,4 @@ tokenizer, model = load_model("bert-base-uncased")
 text="누구든지 아동·청소년이용음란물임을 알면서 이를 소지하여서는 아니된다."
 st.write(text)
 tokenized_text = tokenizer.tokenize(text)
-st.write('tokenized_text >>' + tokenized_text)
+st.write('tokenized_text >>', tokenized_text)
