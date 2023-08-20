@@ -67,7 +67,7 @@ button.css-jgupqz.e10mrw3y2 {
     transform: scale(0);
 }
 
-button.css-qjjohw {
+button.css-qjjohw.ef3psqc4 {
     display: NONE;
 }
 
