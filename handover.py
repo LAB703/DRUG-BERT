@@ -118,8 +118,10 @@ with st.spinner('Updating Report...'):
     
     #Metrics setting and rendering
 
-    hosp_df = pd.read_excel('DataforMock.xlsx',sheet_name = 'Hospitals')
-    hosp = st.selectbox('Choose keyword', hosp_df, help = 'Filter report to show only one hospital')
+    drug_slang_list = ["대마","대마초", "대마유", "디아제팜", "마리화나","메스암페타민", "몰리", "몰핀", "물봉", "물뽕", "아편", "아이스",  
+                        "LSD" ,"양귀비", "엑스터시", "엘에스디", "작대기", "코카인", "해시시", "필로폰", "히로뽕", "헤로인", "모르핀"] 
+               
+    hosp = st.selectbox('마약 관련 단어를 선택하시오.', drug_slang_list, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어들입니다.')
     
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
