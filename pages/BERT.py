@@ -9,7 +9,7 @@ def load_model(model_name_or_path):
     model = BertForSequenceClassification.from_pretrained(model_name_or_path)
     return tokenizer, model
     
-tokenizer, model = load_model('skt/kobert-base-v1')
+tokenizer, model = load_model("bert-base-uncased")
 
 text="누구든지 아동·청소년이용음란물임을 알면서 이를 소지하여서는 아니된다."
 st.write(text)
