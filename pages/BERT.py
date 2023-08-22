@@ -5,8 +5,9 @@ from transformers import BertTokenizerFast, BertForSequenceClassification
 
 import style
 
-st.write(style.style)
+st.write(
 
+st.markdown(style.style, unsafe_allow_html=True)
 @st.cache(allow_output_mutation=True)
 def load_model(model_name_or_path):
     tokenizer = BertTokenizerFast.from_pretrained(model_name_or_path)
