@@ -5,26 +5,18 @@ from transformers import BertTokenizerFast, BertForSequenceClassification
 
 
 # Configure app page
-st.set_page_config(
-    page_title="SDG Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦"
-)
+st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦")
 
 import style
 st.markdown(style.style, unsafe_allow_html=True)
     
 @st.cache(allow_output_mutation=True)
-    
 def load_model(model_name_or_path):
     tokenizer = BertTokenizerFast.from_pretrained(model_name_or_path)
     model = BertForSequenceClassification.from_pretrained(model_name_or_path)
     return tokenizer, model
     
-# tokenizer, model = load_model("bert-base-multilingual-cased")
-tokenizer, model = load_model("beomi/kcbert-base")
-text="누구든지 아동·청소년이용음란물임을 알면서 이를 소지하여서는 아니된다."
-st.write(text)
-tokenized_text = tokenizer.tokenize(text)
-st.write('tokenized_text >>', tokenized_text)
+
 
 
 import streamlit as st
@@ -99,22 +91,9 @@ if submitted:
     # SDG labels list
 
     label_list = [
-        'GOAL 1: No Poverty',
-        'GOAL 2: Zero Hunger',
-        'GOAL 3: Good Health and Well-being',
-        'GOAL 4: Quality Education',
-        'GOAL 5: Gender Equality',
-        'GOAL 6: Clean Water and Sanitation',
-        'GOAL 7: Affordable and Clean Energy',
-        'GOAL 8: Decent Work and Economic Growth',
-        'GOAL 9: Industry, Innovation and Infrastructure',
-        'GOAL 10: Reduced Inequality',
-        'GOAL 11: Sustainable Cities and Communities',
-        'GOAL 12: Responsible Consumption and Production',
-        'GOAL 13: Climate Action',
-        'GOAL 14: Life Below Water',
-        'GOAL 15: Life on Land',
-        'GOAL 16: Peace, Justice and Strong Institutions'
+        '🚨⛔️🚫🔴: No Poverty',
+        '✅🟢🟡✅: Zero Hunger',
+        '🔵🟦🔹🔷: Good Health and Well-being'
     ]
 
     if Text_entry == "":
@@ -188,3 +167,11 @@ if submitted:
             st.header("")
             predicted = st.markdown("###### Predicted " + str(sorted_preds[0][0]))
             Prediction_confidence = st.metric("Prediction confidence", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
+
+
+
+# tokenizer, model = load_model("bert-base-multilingual-cased")
+tokenizer, model = load_model("beomi/kcbert-base")
+text="누구든지 아동·청소년이용음란물임을 알면서 이를 소지하여서는 아니된다."
+st.write(text)
+tokenized_text = tokenizer.tokenize(text)
