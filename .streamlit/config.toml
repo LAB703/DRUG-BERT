@@ -2,4 +2,6 @@
 base="dark"
 primaryColor="#003478"  # "#253347" #"#5252e0"
 backgroundColor="#3a4254"
-secondaryBackgroundColor="#ffca00"  # "#134b9e" #"#4653ff"
+secondaryBackgroundColor="#134b9e" #"#4653ff"
+
+textColor="#ffca00" #"#262730"
