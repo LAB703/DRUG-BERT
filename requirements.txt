@@ -6,3 +6,4 @@ openpyxl
 torch
 transformers
 torchvision
+nltk
