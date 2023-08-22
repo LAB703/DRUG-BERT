@@ -5,7 +5,6 @@ from transformers import BertTokenizerFast, BertForSequenceClassification
 
 import style
 
-st.write(
 
 st.markdown(style.style, unsafe_allow_html=True)
     
