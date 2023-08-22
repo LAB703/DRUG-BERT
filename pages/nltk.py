@@ -3,6 +3,12 @@ import json
 import torch
 from transformers import BertTokenizerFast, BertForSequenceClassification
 
+
+# Configure app page
+st.set_page_config(
+    page_title="SDG Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦"
+)
+
 import style
 st.markdown(style.style, unsafe_allow_html=True)
     
@@ -67,10 +73,6 @@ def load_tokenizer():
     return tokenizer
 
 
-# Configure app page
-st.set_page_config(
-    page_title="SDG Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦"
-)
 
 st.header("🚦 Sustainable Development Goals (SDG) Text Classifier")
 
