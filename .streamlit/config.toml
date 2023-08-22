@@ -2,7 +2,7 @@
 base="dark"
 primaryColor="#003478"  # "#253347" #"#5252e0"
 backgroundColor="#3a4254"
-secondaryBackgroundColor=#"#4653ff" #"#134b9e" 
+secondaryBackgroundColor="#4653ff" #"#134b9e" 
 
 textColor="white" #"#ffca00" #"#262730"
 font="sans serif"
