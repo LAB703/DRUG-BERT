@@ -12,6 +12,7 @@ import style
 st.markdown(style.style, unsafe_allow_html=True)
 
 
+
 st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='🚔')
 
 # with open( "style.css" ) as css:
