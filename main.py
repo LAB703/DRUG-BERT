@@ -210,9 +210,9 @@ with st.expander("Previous Performance"):
                  #text wrapping
                  height=20
                  )
-              , cells = dict(
+              , cells = dict(, color = 'white'),
                   values = [hhc24[K].tolist() for K in hhc24.columns], 
-                  font=dict(size=10),
+                  font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
                   line_color = 'rgba(255,255,255,0.2)', 
@@ -250,7 +250,7 @@ with st.expander("Previous Performance"):
                  )
               , cells = dict(
                   values = [hhc[K].tolist() for K in hhc.columns], 
-                  font=dict(size=10),
+                  font=dict(size=10, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
                   line_color = 'rgba(255,255,255,0.2)',
@@ -274,7 +274,7 @@ with st.expander("Previous Performance"):
                 data = [go.Table (columnorder = [0,1,2,3,4], columnwidth = [10,35,20,20,10],
                                   header = dict(
                                       values = list(lch.columns),
-                                      font=dict(size=12, color = 'white'),
+                                      font=dict(size=12, color='black'),
                                       fill_color = '#264653',
                                       align = 'left',
                                       height=20
