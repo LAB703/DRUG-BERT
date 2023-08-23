@@ -52,6 +52,7 @@ button.css-jgupqz.e10mrw3y2 {
 
 button.css-qjjohw.ef3psqc4 {
     display: NONE;
+    visibility:hidden;
 }
 
 div.viewerBadge_link__1S137 {
