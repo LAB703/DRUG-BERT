@@ -111,7 +111,7 @@ if submitted:
         sorted_preds = sorted(pred_dict.items(), key=lambda x: x[1], reverse=True)
 
         # Make dataframe for plotly bar chart
-        u, v = zip(*sorted_preds)
+        u, v = zip(pred_dict.items()) #*sorted_preds)
         x = list(u)
         y = list(v)
         df2 = pd.DataFrame()
@@ -155,7 +155,7 @@ if submitted:
 
         with c3:
             st.header("")
-            predicted = st.metric("예측된 결과" , str(sorted_preds[0][0]),)
+            predicted = st.metric("예측된 결과" , str(sorted_preds[0][0]))
             Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
