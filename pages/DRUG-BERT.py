@@ -134,7 +134,7 @@ if submitted:
                 template='ggplot2', #seaborn
                 font=dict(
                     family="Arial",
-                    size=20,
+                    size=15,
                     color="white"
                 ),
                 autosize=True, # False
@@ -146,8 +146,8 @@ if submitted:
                 # legend_title="Topics"
         
 
-            fig.update_xaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20))
-            fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20), range=[0, 1])
+            fig.update_xaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=15))
+            fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=15), range=[0, 1])
             fig.update_annotations(font_size=14)  # this changes y_axis, x_axis and subplot title font sizes
 
             # Plot
@@ -155,7 +155,7 @@ if submitted:
 
         with c3:
             st.header("")
-            predicted = st.metric("###### 예측된 결과 : " , str(sorted_preds[0][0]))
+            predicted = st.metric("예측된 결과" , str(sorted_preds[0][0]))
             Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
