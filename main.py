@@ -11,7 +11,6 @@ import header
 
 st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='🚔')
 
-header.header()
 
 import style
 st.markdown(style.style, unsafe_allow_html=True)
@@ -19,26 +18,27 @@ st.markdown(style.style, unsafe_allow_html=True)
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
-# st.sidebar.success("Select a demo above.")
+
 #this is the header
+header.header()
 
-t1, t2, t3 = st.columns((2,5,3)) 
-# Korean_National_Police_Agency_Emblem
-t1.image('images/index.png', width = 120)
-t2.header('SNS 마약 거래 모니터링 시스템')
-re_run = t3.button('🔄 모델 갱신')
-if re_run :
-    st.experimental_rerun()
-    last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M")
-else : 
-    last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:00")
+# t1, t2, t3 = st.columns((2,5,3)) 
+# # Korean_National_Police_Agency_Emblem
+# t1.image('images/index.png', width = 120)
+# t2.header('SNS 마약 거래 모니터링 시스템')
+# re_run = t3.button('🔄 모델 갱신')
+# if re_run :
+#     st.experimental_rerun()
+#     last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M")
+# else : 
+#     last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:00")
 
-t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M"))
-t3.write('마지막 갱신 : ' + last_update)
-st.write('')
-st.write('')
-st.write('')
-st.write('---')
+# t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M"))
+# t3.write('마지막 갱신 : ' + last_update)
+# st.write('')
+# st.write('')
+# st.write('')
+# st.write('---')
 st.subheader('📈📉대시보드 현황판')
 
 drug_slang_list = ["대마","대마초", "대마유", "디아제팜", "마리화나","메스암페타민", "몰리", "몰핀", "물봉", "물뽕", "아편", "아이스",  
