@@ -26,15 +26,9 @@ st.markdown(style.textbox_style,unsafe_allow_html=True)
 ########################################################################################
 
 title.header()
-# t1, t2, t3 = st.columns((2,5,3)) 
-# # Korean_National_Police_Agency_Emblem
-# t1.image('images/index.png', width = 120)
-# t2.header('SNS 마약 거래 모니터링 시스템')
-# t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
-# st.write('')
-# st.write('')
-# st.write('')
-# st.write('---')
+st.write('---')
+st.subheader("🚦 마약 글 분류")
+
 
 @st.cache(allow_output_mutation=True)
 def load_model(model_name_or_path):
@@ -67,24 +61,6 @@ def prep_text(text):
     return joined
 
 
-# model name or path to model
-# checkpoint = "sadickam/sdg-classification-bert"
-
-
-# # Load and cache model
-# @st.cache(allow_output_mutation=True)
-# def load_model():
-#     return AutoModelForSequenceClassification.from_pretrained(checkpoint)
-
-
-# # Load and cache tokenizer
-# @st.cache(allow_output_mutation=True)
-# def load_tokenizer():
-#     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-#     return tokenizer
-
-
-st.subheader("🚦 마약 글 분류")
 
 
 # Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
