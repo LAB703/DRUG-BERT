@@ -132,7 +132,7 @@ if submitted:
         c1, c2, c3 = st.columns([1.5, 0.5, 1])
 
         with c1:
-            st.markdown("##### Prediction outcome")
+            st.markdown("##### 예측 결과")
             # plot graph of predictions
             fig = px.bar(df2, x="Likelihood", y="SDG", orientation="h")
 
@@ -158,7 +158,7 @@ if submitted:
 
             # Plot
             st.plotly_chart(fig, use_container_width=False)
-            st.success("SDG successfully predicted. ", icon="✅")
+            st.success("성공적으로 분류되었습니다!", icon="✅")
 
         with c3:
             st.header("")
