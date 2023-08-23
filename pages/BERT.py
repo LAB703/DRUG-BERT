@@ -69,7 +69,7 @@ def prep_text(text):
 #     return tokenizer
 
 
-st.header("🚦 Sustainable Development Goals (SDG) Text Classifier")
+st.header("🚦 마약 글 분류")
 
 
 # Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
@@ -144,9 +144,9 @@ if submitted:
                     size=20,
                     color="white"
                 ),
-                autosize=False,
-                width=800,
-                height=500,
+                autosize=True, # False
+                width=1000,
+                height=700,
                 xaxis_title="가능성",
                 yaxis_title="분류",
                 # legend_title="Topics"
