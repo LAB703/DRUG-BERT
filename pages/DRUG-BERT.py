@@ -124,7 +124,7 @@ if submitted:
             st.markdown("##### 예측 결과")
             # plot graph of predictions
             fig = px.bar(df2, y="Likelihood", x="SDG") #, orientation="h")
-            
+
 
             fig.update_layout(
                 barmode='stack',
@@ -139,6 +139,7 @@ if submitted:
                 height=500,
                 yaxis_title="가능성",
                 xaxis_title="분류",
+                color_discrete_sequence= ['red', 'blue']
                 # legend_title="Topics"
             )
 
