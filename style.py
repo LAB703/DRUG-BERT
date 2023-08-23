@@ -32,8 +32,8 @@ code {
 div.stButton > button:first-child {
 font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   font-size:100%;
-    background-color: #FCF9F6;
-    font-color: #C0504D;
+    # background-color: #FCF9F6;
+    # font-color: #C0504D;
     
 }
 button.css-jgupqz.e10mrw3y2 {
