@@ -76,16 +76,14 @@ if submitted:
     # SDG labels list
 
     label_list = [
-        '🚨⛔️🚫🔴: 마약 관련 글 확실',
-        # '✅🟢🟡✅: 마약 관련 글 의심',
-        '🔵🟦🔹🔷: 마약 관련 글 비해당'
-        # 'ㅈㄷㄱㅈㄷㄱ'
+        '🚨⛔️🚫🔴 마약 관련 글 확실',
+        '🔵🟦🔹🔷 마약 관련 글 비해당'
     ]
 
     if Text_entry == "":
         st.warning(
             """입력이 필요합니다.""",
-            icon="🟡"
+            icon="🟡🚸⚠️⚠️⚠️⚠️"
         )
 
     elif Text_entry != "":
@@ -153,7 +151,7 @@ if submitted:
 
         with c3:
             st.header("")
-            predicted = st.markdown("###### 예측된 결과 " + str(sorted_preds[0][0]))
+            predicted = st.markdown("###### 예측된 결과 : " + str(sorted_preds[0][0]))
             Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
