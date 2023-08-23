@@ -141,14 +141,14 @@ if submitted:
                 template='seaborn',
                 font=dict(
                     family="Arial",
-                    size=14,
-                    color="black"
+                    size=20,
+                    color="white"
                 ),
                 autosize=False,
                 width=800,
                 height=500,
-                xaxis_title="Likelihood of SDG",
-                yaxis_title="Sustainable development goals (SDG)",
+                xaxis_title="가능성",
+                yaxis_title="분류",
                 # legend_title="Topics"
             )
 
