@@ -89,7 +89,7 @@ with st.spinner('Updating Report...'):
     
     fig.update_traces(marker_color='#264653')
     
-    fig.update_layout(title_text="Number of Completed Handovers by Hour",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None)
+    fig.update_layout(title_text="시간별 게시글 현황",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None)
     
     g1.plotly_chart(fig, use_container_width=True) 
     
@@ -103,7 +103,7 @@ with st.spinner('Updating Report...'):
     
     fig.update_traces(marker_color='#7A9E9F')
     
-    fig.update_layout(title_text="Predicted Number of Arrivals",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None)
+    fig.update_layout(title_text="시간별 게시글 수집 현황",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None)
     
     g2.plotly_chart(fig, use_container_width=True)  
     
@@ -113,7 +113,7 @@ with st.spinner('Updating Report...'):
     
     fig.add_scatter(x=fgdf['Arrived Destination Resolved'], y=fgdf['Target'], mode='lines', line=dict(color="white"), name='Target')
     
-    fig.update_layout(title_text="Average Completed Handover Duration by hour",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None, legend=dict(orientation="h",yanchor="bottom",y=0.9,xanchor="right",x=0.99))
+    fig.update_layout(title_text="시간별 위험글 현황",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None, legend=dict(orientation="h",yanchor="bottom",y=0.9,xanchor="right",x=0.99))
     
     g3.plotly_chart(fig, use_container_width=True) 
       
