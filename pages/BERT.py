@@ -7,8 +7,8 @@ from transformers import BertTokenizerFast, BertForSequenceClassification
 # Configure app page
 st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦")
 
-import style
-st.markdown(style.style, unsafe_allow_html=True)
+# import style
+# st.markdown(style.style, unsafe_allow_html=True)
     
 @st.cache(allow_output_mutation=True)
 def load_model(model_name_or_path):
