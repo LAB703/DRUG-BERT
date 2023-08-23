@@ -138,7 +138,7 @@ if submitted:
                     color="white"
                 ),
                 autosize=True, # False
-                width=400,
+                width=500,
                 height=500,
                 yaxis_title="가능성",
                 xaxis_title="분류",
@@ -155,7 +155,7 @@ if submitted:
 
         with c3:
             st.header("")
-            predicted = st.metric("예측된 결과" , str(sorted_preds[0][0]))
+            predicted = st.metric("예측된 결과" , str(sorted_preds[0][0]),)
             Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
