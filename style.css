@@ -11,7 +11,3 @@
 div[role="listbox"] ul {
     background-color: yellow;
 }
-
-input.custom {
-  caret-color: #253347;
-}
