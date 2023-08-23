@@ -72,7 +72,7 @@ with st.spinner('Updating Report...'):
     m1.write('')
     m2.metric(label ='전날 대비 증가량',value = str(int(to['Value']))+' 건', delta = str(int(to['Previous']))+', 전날 대비', delta_color = 'inverse')
     m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" 분 전", delta = str(int(ch['Previous']))+', 1분전', delta_color = 'inverse')
-    m4.metric(label = '위험도 제일 높은 글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 3일전')
+    m4.metric(label = '현재 위험도 가장 높은 글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 3일전')
     m1.write('')
      
     # Number of Completed Handovers by Hour
@@ -176,7 +176,7 @@ with st.spinner('Updating Report...'):
                   values = [cwdf[K].tolist() for K in cwdf.columns], 
                   font=dict(size=12, color='black'),
                   align = 'left',
-                  fill_color='#264653',
+                  fill_color=colourcode,
                   height=20))]) 
         
     fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
