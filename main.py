@@ -146,7 +146,7 @@ with st.spinner('Updating Report...'):
                   font=dict(size=12, color='black'),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = '#4653FF',
+                  line_color = 'rgba(255,255,255,0.2)', 
                   height=20))])
      
     fig.update_layout(title_text="Current Waiting Handovers",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)                                                           
@@ -274,14 +274,14 @@ with st.expander("Previous Performance"):
                 data = [go.Table (columnorder = [0,1,2,3,4], columnwidth = [10,35,20,20,10],
                                   header = dict(
                                       values = list(lch.columns),
-                                      font=dict(size=12, color='black'),
+                                      font=dict(size=12, color='white'),
                                       fill_color = '#264653',
                                       align = 'left',
                                       height=20
                                           )
               , cells = dict(
                   values = [lch[K].tolist() for K in lch.columns], 
-                  font=dict(size=11),
+                  font=dict(size=10, color='black'),
                   align = 'left',
                   fill_color='#F0F2F6',
                   height=20))])
