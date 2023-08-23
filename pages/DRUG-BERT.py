@@ -151,6 +151,7 @@ if submitted:
             fig.update_xaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=15))
             fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=15), range=[0, 1])
             fig.update_annotations(font_size=14)  # this changes y_axis, x_axis and subplot title font sizes
+            fig.update_traces(width=1)
 
             # Plot
             st.plotly_chart(fig, use_container_width=False)
