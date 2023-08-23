@@ -125,7 +125,7 @@ if submitted:
         with c1:
             st.markdown("##### 예측 결과")
             # plot graph of predictions
-            fig = px.bar(df2, x="Likelihood", y="SDG") #, orientation="h")
+            fig = px.bar(df2, y="Likelihood", x="SDG") #, orientation="h")
             
 
             fig.update_layout(
@@ -139,8 +139,8 @@ if submitted:
                 autosize=True, # False
                 width=700,
                 height=500,
-                xaxis_title="가능성",
-                yaxis_title="분류",
+                yaxis_title="가능성",
+                xaxis_title="분류",
                 # legend_title="Topics"
             )
 
