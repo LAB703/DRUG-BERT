@@ -4,7 +4,8 @@ import json
 import torch
 from transformers import BertTokenizerFast, BertForSequenceClassification
 ########################################################################
-# 템플릿 거
+# 템플릿 거 (https://sadickam-sdg-classification-bert-main-qxg1gv.streamlit.app/)
+(https://github.com/sadickam/sdg-classification-bert/blob/main/main.py)
 import regex as re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 #import string
