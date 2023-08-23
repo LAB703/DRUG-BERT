@@ -21,6 +21,13 @@ st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar
 # st.markdown(style.style, unsafe_allow_html=True)
 ########################################################################################
 
+t1, t2, t3 = st.columns((2,5,3)) 
+# Korean_National_Police_Agency_Emblem
+t1.image('images/index.png', width = 120)
+t2.header('SNS 마약 거래 모니터링 시스템')
+t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
+st.write('---')
+
 @st.cache(allow_output_mutation=True)
 def load_model(model_name_or_path):
     tokenizer = BertTokenizerFast.from_pretrained(model_name_or_path)
