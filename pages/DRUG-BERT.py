@@ -152,7 +152,7 @@ if submitted:
             fig = px.bar(df2, x="Likelihood", y="SDG", orientation="h")
 
             fig.update_layout(
-                # barmode='stack',
+                barmode='stack',
                 template='seaborn',
                 font=dict(
                     family="Arial",
