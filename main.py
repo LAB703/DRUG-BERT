@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+# 참고 코드 https://github.com/data-science-at-swast/handover_poc
+# https://data-science-at-swast-handover-poc-handover-yfa2kz.streamlit.app/
 import streamlit as st
 import time
 import pandas as pd
