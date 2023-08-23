@@ -190,7 +190,7 @@ with st.spinner('Report updated!'):
     
 # Performance Section  
     
-with st.expander("Previous Performance"):
+with st.expander("이전 정보"):
         
     hhc24 = pd.read_excel('DataforMock.xlsx',sheet_name = 'HospitalHandoversCompleted')  
     
