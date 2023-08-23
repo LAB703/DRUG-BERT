@@ -108,7 +108,7 @@ if submitted:
         pred_dict = (dict(zip(label_list, predictions)))
 
         # sort 'pred_dict' by value and index the highest at [0]
-        sorted_preds = sorted(pred_dict.items(), key=lambda x: x[0], reverse=True)
+        sorted_preds = sorted(pred_dict.items(), key=lambda x: x[1], reverse=True)
 
         # Make dataframe for plotly bar chart
         u, v = zip(*sorted_preds)
