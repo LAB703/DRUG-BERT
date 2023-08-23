@@ -24,17 +24,20 @@ t1, t2, t3 = st.columns((2,5,3))
 # Korean_National_Police_Agency_Emblem
 t1.image('images/index.png', width = 120)
 t2.header('SNS 마약 거래 모니터링 시스템')
-t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
-t3.write('마지막 갱신 : ' + datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M"))
 re_run = t3.button('🔄 모델 갱신')
+if re_run :
+    st.experimental_rerun()
+    last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M")
+
+t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M"))
+t3.write('마지막 갱신 : ' + last_update)
 st.write('')
 st.write('')
 st.write('')
 st.write('---')
 st.subheader('📈📉대시보드 현황판')
 
-if re_run :
-    st.experimental_rerun()
+
     
 # t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
 
