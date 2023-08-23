@@ -21,7 +21,10 @@ with open( "style.css" ) as css:
 
 
 #this is the header
+
 title.header()
+st.write('---')
+
 
 # t1, t2, t3 = st.columns((2,5,3)) 
 # # Korean_National_Police_Agency_Emblem
