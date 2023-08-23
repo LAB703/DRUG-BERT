@@ -2,24 +2,24 @@ import streamlit as st
 from datetime import timedelta, datetime
 from pytz import timezone
 
-def formatting(time_now) :
-    weekday_dict = {
-    0: '월요일',
-    1: '화요일',
-    2: '수요일',
-    3: '목요일',
-    4: '금요일',
-    5: '토요일',
-    6: '일요일'
-    }
+# def formatting(time_now) :
+#     weekday_dict = {
+#     0: '월요일',
+#     1: '화요일',
+#     2: '수요일',
+#     3: '목요일',
+#     4: '금요일',
+#     5: '토요일',
+#     6: '일요일'
+#     }
 
-    ampm_dict = {
-        'AM': '오전',
-        'PM': '오후'
-    }
-    tz = timezone('Asia/Seoul')
-      formatted_time = time_now.strftime("%Y년 %m월 %d일") + ' ' + weekday_dict[time_now.weekday()] + ' ' + ampm_dict[time_now.strftime("%p")] + ' ' + time_now.strftime("%I:%M")
-      return formatted_time
+#     ampm_dict = {
+#         'AM': '오전',
+#         'PM': '오후'
+#     }
+#     tz = timezone('Asia/Seoul')
+#       formatted_time = time_now.strftime("%Y년 %m월 %d일") + ' ' + weekday_dict[time_now.weekday()] + ' ' + ampm_dict[time_now.strftime("%p")] + ' ' + time_now.strftime("%I:%M")
+#       return formatted_time
 
 
 def header() :
@@ -33,11 +33,11 @@ def header() :
 
   if re_run :
       st.experimental_rerun()
-      last_update = formatting(datetime.now(tz))
+      last_update = datetime.now() #tz)
   else : 
-      last_update = formatting(datetime.now(tz))
+      last_update = datetime.now() #tz)
   
-  t3.write(datetime.now(tz))
+  t3.write(datetime.now() # tz))
   t3.write('마지막 갱신 : ' + last_update)
   st.write('')
   st.write('---')
