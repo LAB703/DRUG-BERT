@@ -5,7 +5,7 @@ from pytz import timezone
 def header() :
   t1, t2, t3 = st.columns((4,5,3)) 
   # Korean_National_Police_Agency_Emblem
-  t1.image('images/index.png', width = 120)
+  t1.image('images/index.png', width = 200)
   t2.header('SNS 마약 거래 모니터링 시스템')
   tz = timezone('Asia/Seoul')
   re_run = t3.button('🔄 모델 갱신')
