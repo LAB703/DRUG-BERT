@@ -81,7 +81,7 @@ div.streamlit-expanderHeader.st-ae.st-bq.st-ag.st-ah.st-ai.st-aj.st-br.st-bs.st-
 
 textbox_style = """
 #     <style>
-#     .stTextArea [data-baseweb=base-input] {
+#     .stTextArea {
 #         background-image: linear-gradient(140deg, rgb(54, 36, 31) 0%, rgb(121, 56, 100) 50%, rgb(106, 117, 25) 75%);
 #         -webkit-text-fill-color: white;
 #     }
