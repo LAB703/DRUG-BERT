@@ -144,10 +144,10 @@ if submitted:
                 xaxis_title="분류",
                 showlegend=False)
                 # legend_title="Topics"
-            )
+        
 
             fig.update_xaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20))
-            fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20))
+            fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20), range=[0, 1])
             fig.update_annotations(font_size=14)  # this changes y_axis, x_axis and subplot title font sizes
 
             # Plot
