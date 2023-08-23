@@ -21,6 +21,8 @@ st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar
 
 import style
 st.markdown(style.style, unsafe_allow_html=True)
+st.markdown(style.textbox_style, unsafe_allow_html=True)
+
 ########################################################################################
 
 t1, t2, t3 = st.columns((2,5,3)) 
