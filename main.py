@@ -30,6 +30,10 @@ t1.image('images/index.png', width = 120)
 t2.header('SNS 마약 거래 모니터링 시스템')
 t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
 re_run = t3.button('🔄 갱신')
+
+temperature = "0.3"
+st.write(f"temprature: :blue[{temperature}]")
+
 if re_run :
     st.experimental_rerun()
     
