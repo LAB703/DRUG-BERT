@@ -149,11 +149,11 @@ if submitted:
         with c1:
             st.markdown("##### 예측 결과")
             # plot graph of predictions
-            fig = px.bar(df2, x="Likelihood", y="SDG", orientation="h")
+            fig = px.bar(df2, x="Likelihood", y="SDG") #, orientation="h")
 
             fig.update_layout(
                 barmode='stack',
-                template='seaborn',
+                template='ggplot2', #seaborn
                 font=dict(
                     family="Arial",
                     size=20,
