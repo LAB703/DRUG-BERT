@@ -7,8 +7,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import timedelta, datetime
 from pytz import timezone
+import header
 
 st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='🚔')
+
+header.header()
 
 import style
 st.markdown(style.style, unsafe_allow_html=True)
