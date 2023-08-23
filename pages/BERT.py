@@ -148,6 +148,7 @@ if submitted:
                 height=700,
                 xaxis_title="가능성",
                 yaxis_title="분류",
+                title_font_color="red",
                 # legend_title="Topics"
             )
 
