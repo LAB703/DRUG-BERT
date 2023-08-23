@@ -210,7 +210,7 @@ with st.expander("Previous Performance"):
                  #text wrapping
                  height=20
                  )
-              , cells = dict(size=11, color = 'white'),
+              , cells = dict(
                   values = [hhc24[K].tolist() for K in hhc24.columns], 
                   font=dict(size=10, color='black'),
                   align = ['left','center'],
