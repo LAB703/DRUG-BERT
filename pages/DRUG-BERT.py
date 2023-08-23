@@ -83,7 +83,7 @@ if submitted:
     if Text_entry == "":
         st.warning(
             """입력이 필요합니다.""",
-            icon="🟡🚸⚠️⚠️⚠️⚠️"
+            icon="🟡🚧"
         )
 
     elif Text_entry != "":
