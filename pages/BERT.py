@@ -148,12 +148,11 @@ if submitted:
                 height=700,
                 xaxis_title="가능성",
                 yaxis_title="분류",
-                title_font_color="red",
                 # legend_title="Topics"
             )
 
-            fig.update_xaxes(tickangle=0, tickfont=dict(family='Arial', color='black', size=14))
-            fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='black', size=14))
+            fig.update_xaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20))
+            fig.update_yaxes(tickangle=0, tickfont=dict(family='Arial', color='white', size=20))
             fig.update_annotations(font_size=14)  # this changes y_axis, x_axis and subplot title font sizes
 
             # Plot
