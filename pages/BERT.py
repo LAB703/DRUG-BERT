@@ -1,27 +1,38 @@
+# 기존 내거
 import streamlit as st
 import json
 import torch
 from transformers import BertTokenizerFast, BertForSequenceClassification
-
-
-# Configure app page
-st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦")
-
-# import style
-# st.markdown(style.style, unsafe_allow_html=True)
-    
-
-
-import streamlit as st
+########################################################################
+# 템플릿 거
 import regex as re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-import torch
 #import string
 import plotly.express as px
 import pandas as pd
 import nltk
 from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
+
+# Configure app page
+st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦")
+
+# import style
+# st.markdown(style.style, unsafe_allow_html=True)
+########################################################################################
+
+@st.cache(allow_output_mutation=True)
+def load_model(model_name_or_path):
+    tokenizer = BertTokenizerFast.from_pretrained(model_name_or_path)
+    model = BertForSequenceClassification.from_pretrained(model_name_or_path)
+    return tokenizer, model
+
+# tokenizer, model = load_model("bert-base-multilingual-cased")
+tokenizer, model = load_model("beomi/kcbert-base")
+text="누구든지 아동·청소년이용음란물임을 알면서 이를 소지하여서는 아니된다."
+st.write(text)
+tokenized_text = tokenizer.tokenize(text)
+
 
 def prep_text(text):
     """
@@ -42,51 +53,41 @@ def prep_text(text):
 
 
 # model name or path to model
-checkpoint = "sadickam/sdg-classification-bert"
+# checkpoint = "sadickam/sdg-classification-bert"
 
 
-# Load and cache model
-@st.cache(allow_output_mutation=True)
-def load_model():
-    return AutoModelForSequenceClassification.from_pretrained(checkpoint)
+# # Load and cache model
+# @st.cache(allow_output_mutation=True)
+# def load_model():
+#     return AutoModelForSequenceClassification.from_pretrained(checkpoint)
 
 
-# Load and cache tokenizer
-@st.cache(allow_output_mutation=True)
-def load_tokenizer():
-    tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-    return tokenizer
-
+# # Load and cache tokenizer
+# @st.cache(allow_output_mutation=True)
+# def load_tokenizer():
+#     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+#     return tokenizer
 
 
 st.header("🚦 Sustainable Development Goals (SDG) Text Classifier")
 
-with st.expander("About this app", expanded=False):
-    st.write(
-        """
-        - Artificial Intelligence (AI) tool for automatic classification of text with respect to the UN Sustainable Development Goals (SDG)
-        - Note that 16 out of the 17 SDGs are covered
-        - This tool is for sustainability assessment and benchmarking and is not limited to a specific industry
-        - The model powering this app was developed using the OSDG Community Dataset (OSDG-CD) [Link - https://zenodo.org/record/5550238#.Y8Sd5f5ByF5]
-        """
-    )
 
-# Form to recieve input text
+# Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
 st.markdown("##### Text Input")
 with st.form(key="my_form"):
     Text_entry = st.text_area(
         "Paste or type text in the box below (i.e., input)"
     )
-    submitted = st.form_submit_button(label="👉 Get SDG prediction!")
+    submitted = st.form_submit_button(label="👉 분류 !")
 
 if submitted:
 
     # SDG labels list
 
     label_list = [
-        '🚨⛔️🚫🔴: No Poverty',
-        '✅🟢🟡✅: Zero Hunger',
-        '🔵🟦🔹🔷: Good Health and Well-being'
+        '🚨⛔️🚫🔴: 마약 관련 글 확실',
+        '✅🟢🟡✅: 마약 관련 글 의심',
+        '🔵🟦🔹🔷: 마약 관련 글 비해당'
     ]
 
     if Text_entry == "":
@@ -101,12 +102,15 @@ if submitted:
         # Pre-process text
         joined_clean_sents = prep_text(Text_entry)
 
+        
+
         # tokenize pre-processed text
-        tokenizer_ = load_tokenizer()
-        tokenized_text = tokenizer_(joined_clean_sents, return_tensors="pt", truncation=True, max_length=512)
+        # tokenizer_ = load_tokenizer()
+        # tokenized_text = tokenizer_(joined_clean_sents, return_tensors="pt", truncation=True, max_length=512)
+        tokenized_text = tokenizer(joined_clean_sents, return_tensors="pt", truncation=True, max_length=512)
 
         # predict pre-processed
-        model = load_model()
+        # model = load_model()
         text_logits = model(**tokenized_text).logits
         predictions = torch.softmax(text_logits, dim=1).tolist()[0]
         predictions = [round(a, 3) for a in predictions]
@@ -161,14 +165,3 @@ if submitted:
             predicted = st.markdown("###### Predicted " + str(sorted_preds[0][0]))
             Prediction_confidence = st.metric("Prediction confidence", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
-@st.cache(allow_output_mutation=True)
-def load_model(model_name_or_path):
-    tokenizer = BertTokenizerFast.from_pretrained(model_name_or_path)
-    model = BertForSequenceClassification.from_pretrained(model_name_or_path)
-    return tokenizer, model
-
-# tokenizer, model = load_model("bert-base-multilingual-cased")
-tokenizer, model = load_model("beomi/kcbert-base")
-text="누구든지 아동·청소년이용음란물임을 알면서 이를 소지하여서는 아니된다."
-st.write(text)
-tokenized_text = tokenizer.tokenize(text)
