@@ -124,7 +124,9 @@ if submitted:
             st.markdown("##### 예측 결과")
             # plot graph of predictions
     
-            fig = px.bar(df2, y="Likelihood", x="SDG",color_discrete_sequence= ['red', 'blue']) #, orientation="h")
+            fig = px.bar(df2, y="Likelihood", x="SDG",
+                         color = 'category',
+                         color_discrete_sequence= ['red', 'blue']) #, orientation="h")
 
 
             fig.update_layout(
