@@ -20,28 +20,6 @@ with open( "style.css" ) as css:
 # st.sidebar.success("Select a demo above.")
 #this is the header
 
-def color_selectbox(n_element:int, color:str):
-
-    js = f'''
-    <script>
-    // Find all the selectboxes
-    var selectboxes = window.parent.document.getElementsByClassName("stSelectbox");
-    
-    // Select one of them
-    var selectbox = selectboxes[{n_element}];
-    
-    // Select only the selection div
-    var selectregion = selectbox.querySelector('[data-baseweb="select"]');
-    
-    // Modify the color
-    selectregion.style.backgroundColor = '{color}';
-    </script>
-    '''
-    st.components.v1.html(js, height=0)
-
-chosen1 = st.selectbox("Menu 1", ["Option1.1", "Option1.2", "Option1.3"], key="option1")
-color_selectbox(0, 'pink')
-
 t1, t2, t3 = st.columns((2,5,3)) 
 # Korean_National_Police_Agency_Emblem
 t1.image('images/index.png', width = 120)
