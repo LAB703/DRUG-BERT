@@ -28,13 +28,16 @@ def header() :
   t1.image('images/index.png', width = 120)
   t2.header('SNS 마약 거래 모니터링 시스템')
   re_run = t3.button('🔄 모델 갱신')
+  time_now = datetime.now()
+  formatted_time = time_now.strftime("%Y년 %m월 %d일") + ' ' + weekday_dict[time_now.weekday()] + ' ' + ampm_dict[time_now.strftime("%p")] + ' ' + time_now.strftime("%I:%M")
+
   if re_run :
       st.experimental_rerun()
       last_update = formatting(datetime.now(tz))
   else : 
       last_update = formatting(datetime.now(tz))
   
-  t3.write(datetime.now(tz)
+  t3.write(datetime.now(tz))
   t3.write('마지막 갱신 : ' + last_update)
   st.write('')
   st.write('---')
