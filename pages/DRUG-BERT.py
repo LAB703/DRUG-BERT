@@ -158,8 +158,8 @@ if submitted:
                     color="white"
                 ),
                 autosize=True, # False
-                width=1000,
-                height=700,
+                width=700,
+                height=500,
                 xaxis_title="가능성",
                 yaxis_title="분류",
                 # legend_title="Topics"
