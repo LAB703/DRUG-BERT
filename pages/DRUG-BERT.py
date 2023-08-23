@@ -126,7 +126,7 @@ if submitted:
     
             fig = px.bar(df2, y="Likelihood", x="SDG",
                          color = 'SDG',
-                         color_discrete_sequence= ['red', 'blue']) #, orientation="h")
+                         color_discrete_sequence= ['#b82d1d', '#172b9c']) #, orientation="h")
 
 
             fig.update_layout(
@@ -142,6 +142,7 @@ if submitted:
                 height=500,
                 yaxis_title="가능성",
                 xaxis_title="분류",
+                showlegend=False)
                 # legend_title="Topics"
             )
 
