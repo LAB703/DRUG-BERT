@@ -67,7 +67,7 @@ def prep_text(text):
 # st.markdown("##### Text Input")
 with st.form(key="my_form"):
     Text_entry = st.text_area(
-        "Paste or type text in the box below (i.e., input)"
+        "Paste or type text in the box below (i.e., input)", max_chars=512
     )
     submitted = st.form_submit_button(label="👉 분류 !")
 
