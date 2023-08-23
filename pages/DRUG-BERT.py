@@ -108,17 +108,17 @@ if submitted:
         pred_dict = (dict(zip(label_list, predictions)))
 
         # sort 'pred_dict' by value and index the highest at [0]
-        sorted_preds = sorted(pred_dict.items(), key=lambda x: x[1], reverse=True)
+        sorted_preds = sorted(pred_dict.items(), key=lambda x: x[0], reverse=True)
 
         # Make dataframe for plotly bar chart
-        u, v = zip(pred_dict.items()) #*sorted_preds)
+        u, v = zip(*sorted_preds)
         x = list(u)
         y = list(v)
         df2 = pd.DataFrame()
         df2['SDG'] = x
         df2['Likelihood'] = y
 
-        c1, c2, c3 = st.columns([2, 0.5, 1])
+        c1, c2, c3 = st.columns([2, 0.5, 2])
 
         with c1:
             st.markdown("##### 예측 결과")
