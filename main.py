@@ -12,6 +12,7 @@ import header
 st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='🚔')
 
 
+
 import style
 st.markdown(style.style, unsafe_allow_html=True)
 
