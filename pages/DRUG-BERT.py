@@ -125,7 +125,7 @@ if submitted:
             # plot graph of predictions
     
             fig = px.bar(df2, y="Likelihood", x="SDG",
-                         color = 'category',
+                         color = 'SDG',
                          color_discrete_sequence= ['red', 'blue']) #, orientation="h")
 
 
