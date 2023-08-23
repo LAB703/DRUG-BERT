@@ -124,9 +124,9 @@ if submitted:
             st.markdown("##### 예측 결과")
             # plot graph of predictions
     
-            fig = px.bar(df2, y="Likelihood", x="SDG",
-                         color = 'SDG',
-                         color_discrete_map = {label_list[1]: '#172b9c',label_list[0]: '#b82d1d'}) #, 'versicolor': 'rgb(0,0,255)'})
+            fig = px.bar(df2, y="Likelihood", x="SDG")
+                         # color = 'SDG',
+                         # color_discrete_map = {label_list[1]: '#172b9c',label_list[0]: '#b82d1d'}) #, 'versicolor': 'rgb(0,0,255)'})
 
                          # color_discrete_sequence= ['#b82d1d', '#172b9c']) #, orientation="h")
 
