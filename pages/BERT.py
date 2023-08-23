@@ -129,7 +129,7 @@ if submitted:
         df2['SDG'] = x
         df2['Likelihood'] = y
 
-        c1, c2, c3 = st.columns([1.5, 0.5, 1])
+        c1, c2, c3 = st.columns([2, 0.5, 1])
 
         with c1:
             st.markdown("##### 예측 결과")
