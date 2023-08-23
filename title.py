@@ -19,5 +19,4 @@ def header() :
   t3.write('마지막 갱신 : ' + last_update)
     
   st.write('')
-  st.write('---')
 
