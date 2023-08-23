@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import timedelta, datetime
 from pytz import timezone
-import header
+import title
 
 st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='🚔')
 
@@ -21,7 +21,7 @@ with open( "style.css" ) as css:
 
 
 #this is the header
-header.header()
+title.header()
 
 # t1, t2, t3 = st.columns((2,5,3)) 
 # # Korean_National_Police_Agency_Emblem
