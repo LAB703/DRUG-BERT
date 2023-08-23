@@ -32,7 +32,7 @@ t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
 re_run = t3.button('🔄 갱신')
 
 temperature = "0.3"
-st.write(f"temprature: :blue[{temperature}]")
+st.write(f":red[temprature]: :blue[{temperature}]")
 
 if re_run :
     st.experimental_rerun()
