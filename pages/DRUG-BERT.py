@@ -150,10 +150,11 @@ if submitted:
 
             # Plot
             st.plotly_chart(fig, use_container_width=False)
-            st.success("성공적으로 분류되었습니다!", icon="✅")
 
         with c3:
             st.header("")
             predicted = st.markdown("###### 예측된 결과 " + str(sorted_preds[0][0]))
             Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
+        st.success("성공적으로 분류되었습니다!", icon="✅")
+         
