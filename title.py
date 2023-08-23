@@ -15,6 +15,7 @@ def formatting(time_now) :
 
     tz = timezone('Asia/Seoul')
     formatted_time = time_now.strftime("%Y년 %m월 %d일") + ' ' + time_now.weekday() + time_now.strftime("%I:%M") # weekday_dict[time_now.weekday()] + ' ' time_now.strftime("%I:%M")
+    
     return formatted_time
 
 def header() :
@@ -31,7 +32,9 @@ def header() :
       last_update = datetime.now(tz).strftime("%Y-%m-%d %A %H:00")
   
   t3.write(datetime.now(tz).strftime("%Y-%m-%d %A %H:%M"))
+  t3.write(formatting(datetime.now(tz))
   t3.write('마지막 갱신 : ' + last_update)
+    
   st.write('')
   st.write('')
   st.write('')
