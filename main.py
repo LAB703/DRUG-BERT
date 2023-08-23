@@ -31,6 +31,7 @@ st.write('')
 st.write('')
 st.write('')
 st.write('---')
+st.subheader('📈📉대시보드 현황판')
 
 if re_run :
     st.experimental_rerun()
