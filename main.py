@@ -26,6 +26,10 @@ t1.image('images/index.png', width = 120)
 t2.header('SNS 마약 거래 모니터링 시스템')
 t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
 re_run = t3.button('🔄 모델 갱신')
+st.write('')
+st.write('')
+st.write('')
+st.write('---')
 
 if re_run :
     st.experimental_rerun()
