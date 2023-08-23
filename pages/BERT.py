@@ -21,8 +21,20 @@ st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar
 
 import style
 st.markdown(style.style, unsafe_allow_html=True)
-st.markdown(style.textbox_style, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+    .stTextArea [data-baseweb=base-input] {
+        background-image: linear-gradient(140deg, rgb(54, 36, 31) 0%, rgb(121, 56, 100) 50%, rgb(106, 117, 25) 75%);
+        -webkit-text-fill-color: white;
+    }
+
+    .stTextArea [data-baseweb=base-input] [disabled=""]{
+        background-image: linear-gradient(45deg, red, purple, red);
+        -webkit-text-fill-color: gray;
+    }
+    </style>
+    """,unsafe_allow_html=True)
 
 disable_textarea = st.checkbox("Disable text area:")
 
@@ -31,7 +43,6 @@ st.text_area(
     value="This is a repeated sentence "*20,
     height=300,
     disabled=disable_textarea)
-
 ########################################################################################
 
 t1, t2, t3 = st.columns((2,5,3)) 
