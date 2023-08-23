@@ -79,18 +79,18 @@ div.streamlit-expanderHeader.st-ae.st-bq.st-ag.st-ah.st-ai.st-aj.st-br.st-bs.st-
 </style>
 '''
 
-textbox_style = """
-    <style>
-    .stTextArea [data-baseweb=base-input] {
-        background-color: #ffca00;
-        -webkit-text-fill-color: #253347;
-    }
+# textbox_style = """
+#     <style>
+#     .stTextArea [data-baseweb=base-input] {
+#         background-color: #ffca00;
+#         -webkit-text-fill-color: #253347;
+#     }
 
-    .stTextArea [data-baseweb=base-input] [disabled=""]{
-        background-image: linear-gradient(45deg, red, purple, red);
-        -webkit-text-fill-color: gray;
-    }
-    </style>
-    """
+#     .stTextArea [data-baseweb=base-input] [disabled=""]{
+#         background-image: linear-gradient(45deg, red, purple, red);
+#         -webkit-text-fill-color: gray;
+#     }
+#     </style>
+#     """
 
 
