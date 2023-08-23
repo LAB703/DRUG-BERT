@@ -19,7 +19,7 @@ nltk.download('punkt')
 # Configure app page
 st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar_state="auto", page_icon="🚦")
 
-# import style
+import style
 st.markdown(style.style, unsafe_allow_html=True)
 ########################################################################################
 
