@@ -14,7 +14,7 @@ def formatting(time_now) :
     }
 
     tz = timezone('Asia/Seoul')
-    formatted_time = time_now.strftime("%Y년 %m월 %d일") #+ ' ' + weekday_dict[time_now.weekday()] + ' ' time_now.strftime("%I:%M")
+    formatted_time = time_now.strftime("%Y년 %m월 %d일") + ' ' + time_now.weekday() + time_now.strftime("%I:%M") # weekday_dict[time_now.weekday()] + ' ' time_now.strftime("%I:%M")
     return formatted_time
 
 def header() :
