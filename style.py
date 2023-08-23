@@ -76,6 +76,9 @@ div.streamlit-expanderHeader.st-ae.st-bq.st-ag.st-ah.st-ai.st-aj.st-br.st-bs.st-
     font-weight: 200;
 }
 
+input.custom {
+  caret-color: #253347;
+}
 </style>
 '''
 
