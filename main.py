@@ -13,7 +13,6 @@ st.set_page_config(page_title='SNS 모니터링',  layout='wide', page_icon='�
 import style
 st.markdown(style.style, unsafe_allow_html=True)
 
-
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
@@ -39,11 +38,6 @@ st.write('')
 st.write('---')
 st.subheader('📈📉대시보드 현황판')
 
-
-    
-# t2.markdown(" **tel:** 01392 451192 **| website:** https://www.swast.nhs.uk **| email:** mailto:data.science@swast.nhs.uk")
-
-
 drug_slang_list = ["대마","대마초", "대마유", "디아제팜", "마리화나","메스암페타민", "몰리", "몰핀", "물봉", "물뽕", "아편", "아이스",  
                         "LSD" ,"양귀비", "엑스터시", "엘에스디", "작대기", "코카인", "해시시", "필로폰", "히로뽕", "헤로인", "모르핀"] 
 
@@ -66,8 +60,8 @@ with st.spinner('Updating Report...'):
     
     
                
-    drug_slang = st.selectbox('마약 관련 단어를 선택하시오.', drug_slang_list, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어들입니다.')
-    hosp = st.selectbox('병원', hosp_df, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어들입니다.')
+    drug_slang = st.selectbox('마약 관련 단어를 선택하시오.', drug_slang_list, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어의 일부입니다.')
+    hosp = st.selectbox('병원', hosp_df, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어의 일부입니다.')
     
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
