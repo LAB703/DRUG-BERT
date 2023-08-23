@@ -27,7 +27,7 @@ st.markdown(style.textbox_style,unsafe_allow_html=True)
 t1, t2, t3 = st.columns((2,5,3)) 
 # Korean_National_Police_Agency_Emblem
 t1.image('images/index.png', width = 120)
-t2.subheader('SNS 마약 거래 모니터링 시스템')
+t2.header('SNS 마약 거래 모니터링 시스템')
 t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M:%S"))
 st.write('')
 st.write('')
@@ -82,7 +82,7 @@ def prep_text(text):
 #     return tokenizer
 
 
-st.header("🚦 마약 글 분류")
+st.subheader("🚦 마약 글 분류")
 
 
 # Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
