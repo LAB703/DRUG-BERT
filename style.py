@@ -83,7 +83,7 @@ textbox_style = """
     .stTextArea [data-baseweb=base-input] {
         background-color: #ffca00;
         font-color: #253347;
-        -webkit-text-fill-color: white;
+        -webkit-text-fill-color: #253347;
     }
 
     .stTextArea [data-baseweb=base-input] [disabled=""]{
