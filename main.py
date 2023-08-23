@@ -48,6 +48,7 @@ for drug in drug_slang_list :
 
 with tab2 : 
     # drug = pd.read_csv('data/트위터/csv/작대기.csv', index_col = 0)
+    print('')
 
 ## Data
 
