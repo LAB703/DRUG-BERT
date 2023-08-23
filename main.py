@@ -205,20 +205,20 @@ with st.expander("Previous Performance"):
                  values = list(hhc24.columns),
                  font=dict(size=11, color = 'white'),
                  fill_color = '#264653',
-                 line_color = '#4653FF',
+                 line_color = 'rgba(255,255,255,0.2)',
                  align = ['left','center'],
                  #text wrapping
                  height=20
                  )
               , cells = dict(
                   values = [hhc24[K].tolist() for K in hhc24.columns], 
-                  font=dict(size=10, color='black'),
+                  font=dict(size=10),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'white', 
+                  line_color = 'rgba(255,255,255,0.2)', 
                   height=20))])
      
-    fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
+    fig.update_layout(title_text="Hospital Handovers Completed in the Past 24 Hours",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=400)                                                               
     
     st.plotly_chart(fig, use_container_width=True)      
     
@@ -243,20 +243,20 @@ with st.expander("Previous Performance"):
                  values = list(hhc.columns),
                  font=dict(size=11, color = 'white'),
                  fill_color = '#264653',
-                 line_color = '#4653FF',
+                 line_color = 'rgba(255,255,255,0.2)',
                  align = ['left','center'],
                  #text wrapping
                  height=20
                  )
               , cells = dict(
                   values = [hhc[K].tolist() for K in hhc.columns], 
-                  font=dict(size=10, color='black'),
+                  font=dict(size=10),
                   align = ['left','center'],
                   fill_color = colourcode,
-                  line_color = 'while',
+                  line_color = 'rgba(255,255,255,0.2)',
                   height=20))])
      
-    fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
+    fig.update_layout(title_text="Hospital Handovers Completed by Hour",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)                                                               
     
     p1.plotly_chart(fig, use_container_width=True)  
     
@@ -274,32 +274,21 @@ with st.expander("Previous Performance"):
                 data = [go.Table (columnorder = [0,1,2,3,4], columnwidth = [10,35,20,20,10],
                                   header = dict(
                                       values = list(lch.columns),
-                                      font=dict(size=12, color = ' white'),
-                                      fill_color = '#4653FF',
+                                      font=dict(size=12, color = 'white'),
+                                      fill_color = '#264653',
                                       align = 'left',
                                       height=20
                                           )
               , cells = dict(
                   values = [lch[K].tolist() for K in lch.columns], 
-                  font=dict(size=11, color='black'),
+                  font=dict(size=11),
                   align = 'left',
-                  fill_color='white',
+                  fill_color='#F0F2F6',
                   height=20))])
         
-    fig.update_layout(title_text="Longest Completed Handovers",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)
+    fig.update_layout(title_text="Longest Completed Handovers",title_font_color = '#264653',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=600)
         
     p2.plotly_chart(fig, use_container_width=True)
-
-
-# # Contact Form
-
-# with st.expander("Contact us"):
-#     with st.form(key='contact', clear_on_submit=True):
-        
-#         email = st.text_input('Contact Email')
-#         st.text_area("Query","Please fill in all the information or we may not be able to process your request")  
-        
-#         submit_button = st.form_submit_button(label='Send Information')
         
         
         
