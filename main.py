@@ -28,6 +28,8 @@ re_run = t3.button('🔄 모델 갱신')
 if re_run :
     st.experimental_rerun()
     last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M")
+else : 
+    last_update = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:00")
 
 t3.write(datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %A %H:%M"))
 t3.write('마지막 갱신 : ' + last_update)
