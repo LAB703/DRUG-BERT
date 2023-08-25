@@ -9,7 +9,6 @@ title.header()
 # https://langchain-chat-search.streamlit.app/
 # https://langchain-quickstart.streamlit.app
 
-
 with st.sidebar:
         st.markdown(
             "## 사용법\n"
@@ -23,26 +22,11 @@ with st.sidebar:
             placeholder="OpenAI API key를 입력하세요. (sk-...)",
             help="여기에서 OpenAI API key를 발급받을 수 있습니다. https://platform.openai.com/account/api-keys.",  # noqa: E501
             value=st.session_state.get("OPENAI_API_KEY", ""),
-                # os.environ.get("OPENAI_API_KEY", None)  # local
-             
+                # os.environ.get("OPENAI_API_KEY", None)  # local       
         )
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
-
         st.markdown("---")
-        # st.markdown("# About")
-        # st.markdown(
-        #     "📖KnowledgeGPT allows you to ask questions about your "
-        #     "documents and get accurate answers with instant citations. "
-        # )
-        # st.markdown(
-        #     "This tool is a work in progress. "
-        #     "You can contribute to the project on [GitHub](https://github.com/mmz-001/knowledge_gpt) "  # noqa: E501
-        #     "with your feedback and suggestions💡"
-        # )
-        # st.markdown("Made by [mmz_001](https://twitter.com/mm_sasmitha)")
-        # st.markdown("---")
-
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
@@ -76,4 +60,6 @@ if not uploaded_file:
 else :
     is_open_ai_key_valid(openai_api_key)
 
+random_change = st.button("hi")
+examples = st.text_input(value = "안녕", on_change = random_change)
 
