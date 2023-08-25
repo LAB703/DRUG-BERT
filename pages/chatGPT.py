@@ -40,7 +40,7 @@ def reset():
     # return example
 
 random_change = st.button('Reset 🔁', on_click=reset)
-examples = st.text_input(value = st.session_state.get("OPENAI_API_KEY"), on_change = reset)
+examples = st.text_input(value = random.choice(example_lst), on_change = reset)
 
 
 @st.cache_data(show_spinner=False)
