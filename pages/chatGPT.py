@@ -61,5 +61,5 @@ else :
     is_open_ai_key_valid(openai_api_key)
 
 random_change = st.button("hi")
-examples = st.text_input(value = "안녕", on_change = random_change)
+# examples = st.text_input(value = "안녕", on_change = random_change)
 
