@@ -31,18 +31,19 @@ with st.sidebar:
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
-random_change = st.button("Reset 🔁")
+
 example_lst = ['a', 'b', 'c' ,'d', 'e']
 
 def reset():
     st.session_state.selection = 'Please Select'
 
-st.button('Reset', on_click=reset)
+random_change = st.button('Reset 🔁"', on_click=reset)
 
 if random_change :
     example = random.choice(example_lst)
-    st.write(example)      
+    st.write(example)
 examples = st.text_input(value = example)
+
 
 @st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
