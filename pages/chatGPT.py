@@ -12,10 +12,10 @@ title.header()
 
 with st.sidebar:
         st.markdown(
-            "## How to use\n"
-            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"  # noqa: E501
-            "2. Upload a pdf, docx, or txt file📄\n"
-            "3. Ask a question about the document💬\n"
+            "## 사용법\n"
+            "1. 🔑 [OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요. \n"  # noqa: E501
+            "2. 📄 구글에서 크롤링된 파일을 입력하세요. \n"
+            "3. 💬 실행을 누르세요.\n"
         )
         api_key_input = st.text_input(
             "OpenAI API Key",
