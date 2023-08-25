@@ -72,6 +72,6 @@ uploaded_file = st.file_uploader(
 if not uploaded_file:
     st.stop()
 else :
-    is_open_ai_key_valid()
+    is_open_ai_key_valid(openai_api_key)
 
 
