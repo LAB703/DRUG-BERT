@@ -44,8 +44,6 @@ def reset():
 random_change = st.button('Reset 🔁', on_click=reset)
 
 examples = st.text_input(value = reset(), on_change = reset)
-else : 
-    st.stop()
 
 
 @st.cache_data(show_spinner=False)
