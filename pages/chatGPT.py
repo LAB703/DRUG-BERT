@@ -34,13 +34,12 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 example_lst = ['a', 'b', 'c' ,'d', 'e']
 
+st.selectbox('Select:',['Please Select',1,2,3],key='selection')
+
 def reset():
     st.session_state.selection = 'Please Select'
-    # example = random.choice(example_lst)
-    # return example
 
-random_change = st.button('Reset 🔁', on_click=reset)
-examples = st.text_input(value = random.choice(example_lst)) #, on_change = reset)
+st.button('Reset', on_click=reset)
 
 
 @st.cache_data(show_spinner=False)
