@@ -36,12 +36,11 @@ example_lst = ['a', 'b', 'c' ,'d', 'e']
 
 def reset():
     st.session_state.selection = 'Please Select'
-    example = random.choice(example_lst)
-    return example
+    # example = random.choice(example_lst)
+    # return example
 
 random_change = st.button('Reset 🔁', on_click=reset)
-
-examples = st.text_input(value = "qkqjd", on_change = reset)
+examples = st.text_input(value = st.session_state.get("OPENAI_API_KEY"), on_change = reset)
 
 
 @st.cache_data(show_spinner=False)
