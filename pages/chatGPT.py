@@ -43,6 +43,8 @@ if random_change :
     example = random.choice(example_lst)
     st.write(example)
     examples = st.text_input(value = example)
+else : 
+    st.stop()
 
 
 @st.cache_data(show_spinner=False)
