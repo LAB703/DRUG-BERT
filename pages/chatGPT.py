@@ -49,7 +49,7 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 @st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
     if not openai_api_key:
-        st.error("좌측에 OpenAI API key를 입력하시오!")
+        st.warning("좌측에 OpenAI API key를 입력하시오!")
         return False
     try:
         openai.ChatCompletion.create(
@@ -59,7 +59,7 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
         )
     except Exception as e:
         st.error(f"올바른 OpenAI API key가 아닙니다.")
-        logger.error(f"올바른 OpenAI API key가 아닙니다.")
+        # logger.error(f"올바른 OpenAI API key가 아닙니다.")
         #     st.error(f"{e.__class__.__name__}: {e}")
         # logger.error(f"{e.__class__.__name__}: {e}")
         return False
