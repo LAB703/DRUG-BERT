@@ -58,8 +58,8 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
             api_key=openai_api_key,
         )
     except Exception as e:
-        st.error(f"올바른 OpenAI API key가 아닙니다.")
-        # logger.error(f"올바른 OpenAI API key가 아닙니다.")
+        st.error(f"올바른 OpenAI API key가 아닙니다. 키를 재확인하세요.")
+        # logger.error(f"올바른 OpenAI API key가 아닙니다. ")
         #     st.error(f"{e.__class__.__name__}: {e}")
         # logger.error(f"{e.__class__.__name__}: {e}")
         return False
