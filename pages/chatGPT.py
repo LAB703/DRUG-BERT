@@ -1,6 +1,7 @@
 import streamlit as st
 import title
 import openai
+import random
 
 title.header()
 # https://ask-my-pdf.streamlit.app/
@@ -30,9 +31,11 @@ with st.sidebar:
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
-random_change = st.button("hi")
-examples = st.text_input(value = "안녕", on_change = random_change)
+random_change = st.button("Reset 🔁")
 
+example_lst = ['a', 'b', 'c' ,'d', 'e']
+if random_change :
+        examples = st.text_input(value = random.choice(example_lst))
 
 @st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
