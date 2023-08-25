@@ -46,17 +46,6 @@ with st.sidebar:
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
-
-
-uploaded_file = st.file_uploader(
-    "Upload a pdf, docx, or txt file",
-    type=["pdf", "docx", "txt"],
-    help="Scanned documents are not supported yet!",
-)
-
-if not uploaded_file:
-    st.stop()
-
 @st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
     if not openai_api_key:
@@ -73,3 +62,16 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
         logger.error(f"{e.__class__.__name__}: {e}")
         return False
     return True
+
+uploaded_file = st.file_uploader(
+    "Upload a pdf, docx, or txt file",
+    type=["pdf", "docx", "txt"],
+    help="Scanned documents are not supported yet!",
+)
+
+if not uploaded_file:
+    st.stop()
+else :
+    is_open_ai_key_valid()
+
+
