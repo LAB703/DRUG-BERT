@@ -47,12 +47,6 @@ with st.sidebar:
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 
-if not openai_api_key:
-    st.warning(
-        "Enter your OpenAI API key in the sidebar. You can get a key at"
-        " https://platform.openai.com/account/api-keys."
-    )
-
 
 uploaded_file = st.file_uploader(
     "Upload a pdf, docx, or txt file",
@@ -66,7 +60,7 @@ if not uploaded_file:
 @st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
     if not openai_api_key:
-        st.error("Please enter your OpenAI API key in the sidebar!")
+        st.error("좌측에 OpenAI API key를 입력하시오!")
         return False
     try:
         openai.ChatCompletion.create(
