@@ -34,7 +34,8 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 random_change = st.button("Reset 🔁")
 example_lst = ['a', 'b', 'c' ,'d', 'e']
 if random_change :
-    example = random.choice(example_lst)        
+    example = random.choice(example_lst)
+    st.write(example)      
 examples = st.text_input(value = example)
 
 @st.cache_data(show_spinner=False)
