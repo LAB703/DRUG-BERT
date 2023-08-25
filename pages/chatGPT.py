@@ -30,6 +30,10 @@ with st.sidebar:
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
+random_change = st.button("hi")
+examples = st.text_input(value = "안녕", on_change = random_change)
+
+
 @st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
     if not openai_api_key:
@@ -60,6 +64,4 @@ if not uploaded_file:
 else :
     is_open_ai_key_valid(openai_api_key)
 
-random_change = st.button("hi")
-# examples = st.text_input(value = "안녕", on_change = random_change)
 
