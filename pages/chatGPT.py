@@ -37,14 +37,13 @@ example_lst = ['a', 'b', 'c' ,'d', 'e']
 def reset():
     st.session_state.selection = 'Please Select'
     example = random.choice(example_lst)
+    return example
+
         
 
 random_change = st.button('Reset 🔁', on_click=reset)
 
-if random_change :
-    example = random.choice(example_lst)
-    st.write(example)
-    examples = st.text_input(value = example, on_change = reset)
+examples = st.text_input(value = reset(), on_change = reset)
 else : 
     st.stop()
 
