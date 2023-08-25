@@ -39,11 +39,9 @@ def reset():
     example = random.choice(example_lst)
     return example
 
-        
-
 random_change = st.button('Reset 🔁', on_click=reset)
 
-examples = st.text_input(value = reset(), on_change = reset)
+examples = st.text_input(value = "qkqjd", on_change = reset)
 
 
 @st.cache_data(show_spinner=False)
