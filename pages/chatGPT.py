@@ -20,7 +20,7 @@ with st.sidebar:
         api_key_input = st.text_input(
             "OpenAI API Key",
             type="password",
-            placeholder="Paste your OpenAI API key here (sk-...)",
+            placeholder="OpenAI API key를 입력하세요. (sk-...)",
             help="여기에서 OpenAI API key를 발급받을 수 있습니다. https://platform.openai.com/account/api-keys.",  # noqa: E501
             value=st.session_state.get("OPENAI_API_KEY", ""),
                 # os.environ.get("OPENAI_API_KEY", None)  # local
@@ -66,9 +66,9 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
     return True
 
 uploaded_file = st.file_uploader(
-    "Upload a pdf, docx, or txt file",
-    type=["pdf", "docx", "txt"],
-    help="Scanned documents are not supported yet!",
+    "Upload a csv, txt, or json file",
+    type=["csv", "txt", "json"],
+    help="파일을 업로드 하세요.",
 )
 
 if not uploaded_file:
