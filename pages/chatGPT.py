@@ -33,6 +33,12 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 random_change = st.button("Reset 🔁")
 example_lst = ['a', 'b', 'c' ,'d', 'e']
+
+def reset():
+    st.session_state.selection = 'Please Select'
+
+st.button('Reset', on_click=reset)
+
 if random_change :
     example = random.choice(example_lst)
     st.write(example)      
