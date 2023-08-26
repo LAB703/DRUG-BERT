@@ -32,15 +32,13 @@ with st.sidebar:
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 
-example_lst = ['a', 'b', 'c' ,'d', 'e']
-
-st.selectbox('Select:',['Please Select',1,2,3],key='selection')
+example_lst = ['예시 문장 1', '예시 문장 2', '예시 문장 3' ,'예시 문장 4', '예시 문장 5']
 
 def reset():
     st.session_state.selection = 'Please Select'
 
 st.button('Reset', on_click=reset)
-st.text_input("", random.choice(example_lst) )
+st.text_input("", random.choice(example_lst))
 
 
 @st.cache_data(show_spinner=False)
