@@ -40,7 +40,7 @@ def reset():
     st.session_state.selection = 'Please Select'
 
 st.button('Reset', on_click=reset)
-st.text_input("wsdfsdfs", "werwer")
+st.text_input("", random.choice(example_lst) )
 
 
 @st.cache_data(show_spinner=False)
