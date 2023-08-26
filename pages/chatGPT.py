@@ -40,7 +40,7 @@ def reset():
     st.session_state.selection = 'Please Select'
 
 st.button('Reset', on_click=reset)
-st.text_input(value ="werwer")
+st.text_input("wsdfsdfs", "werwer")
 
 
 @st.cache_data(show_spinner=False)
