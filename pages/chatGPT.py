@@ -28,13 +28,15 @@ with st.sidebar:
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
         st.markdown("---")
-        st.markdown("## 사용된 프롬프트")
-        st.code("<prompt> ~~~~")
+        
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 
 example_lst = ['예시 문장 1', '예시 문장 2', '예시 문장 3' ,'예시 문장 4', '예시 문장 5']
+
+st.markdown("## 사용된 프롬프트")
+st.code("<prompt> ~~~~")
 
 def reset():
     st.session_state.selection = 'Please Select'
