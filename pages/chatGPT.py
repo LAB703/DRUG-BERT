@@ -28,6 +28,8 @@ with st.sidebar:
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
         st.markdown("---")
+        st.markdown("## 사용된 프롬프트")
+        st.code("<prompt> ~~~~")
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
