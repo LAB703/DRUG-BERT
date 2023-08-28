@@ -35,33 +35,33 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 example_dict = { 1 : {
         "example" : '''
-input : 엑스터시 팝니다,카톡【opn6】엑스터시 판매,엑스터시 구매,텔레【opn66】엑스터시 구입,엑스터시 판매사이트. 작성자.
+input : 엑스터시 팝니다,카톡【opn6】엑스터시 판매,엑스터시 구매,텔레【opn66】엑스터시 구입,엑스터시 판매사이트. 작성자. \n
 output :
 ''',
 "output" : 'opn66'},
         
 2 : {
         "example" : '''
-input : 정품엑스터시판매가격☆카톡:kodak8☆텔레그램:Komen68☆엑스터시온라인직구입방법 ... 엑스타시와 물뽕(GHB) ,고메요 ,프로포폴,졸피뎀 5종류 판매합니다.
+input : 정품엑스터시판매가격☆카톡:kodak8☆텔레그램:Komen68☆엑스터시온라인직구입방법 ... 엑스타시와 물뽕(GHB) ,고메요 ,프로포폴,졸피뎀 5종류 판매합니다. \n
 output :
 ''',
 "output" : 'Komen68'},
 
 3 : {
         "example" : '''
-input : People named 엑스터시 정품 판매 (( 3618.TK )) (( 카톡:app3 )) (( 라인:dpp3w )) (( 텔레그램:bby38 )) 지방 엑스터시 썰 엑스터시 직거래 구입 후기,LSD 먹이고 강간 ...
+input : People named 엑스터시 정품 판매 (( 3618.TK )) (( 카톡:app3 )) (( 라인:dpp3w )) (( 텔레그램:bby38 )) 지방 엑스터시 썰 엑스터시 직거래 구입 후기 ... \n
 output :
 ''',
 "output" : 'bby38'},
 4 : {
         "example" : '''
-input : 도리도리판매✩라인wto56✩텔레myy33✩카톡zcc38 라인wto56✩ ... 카톡zcc38✩
+input : 도리도리판매✩라인wto56✩텔레myy33✩카톡zcc38 라인wto56✩ ... 카톡zcc38✩ \n
 output : 
 ''',
 "output" : 'myy33'},
 5 : {
         "example" : '''
-input : 엑스터시 팝니다 (텔ㄹㅔ@fofoice) 엑스터시팝니다 엑스터시파는곳 ☎ 상담텔레
+input : 엑스터시 팝니다 (텔ㄹㅔ@fofoice) 엑스터시팝니다 엑스터시파는곳 ☎ 상담텔레 \n
 output : 
 ''',
 "output" : 'fofoice'},
@@ -93,7 +93,7 @@ def reset():
 
 st.button('Reset', on_click=reset)
 example_num = random.randrange(1,6)
-st.text_input("", example_dict[example_num]['example'])
+st.text_input("", example_dict[example_num]['example'], )
 st.write('추출된 ID : ' + example_dict[example_num]['output'])
 
 
