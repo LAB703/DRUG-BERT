@@ -49,7 +49,7 @@ with st.spinner('Updating Report...'):
     
     drug_slang = st.selectbox('마약 관련 단어를 선택하시오.', drug_slang_list, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어의 일부입니다.')
     # hosp = st.selectbox('병원', hosp_df, help = '치안정책연구소에서 공개한 마약은어사전에 포함된 단어의 일부입니다.')
-    hosp ='Ant NHS Foundation Trust'
+    hosp ='All'
     m1, m2, m3, m4, m5 = st.columns((1,1,1,1,1))
     
     todf = pd.read_excel('DataforMock.xlsx',sheet_name = 'metrics')
@@ -60,7 +60,7 @@ with st.spinner('Updating Report...'):
     m1.write('')
     m2.metric(label ='전날 대비 증가량',value = str(int(to['Value']))+' 건', delta = str(int(to['Previous']))+', 전날 대비', delta_color = 'inverse')
     m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" 분 전", delta = str(int(ch['Previous']))+', 전날 평균대비', delta_color = 'inverse')
-    m4.metric(label = '오늘 마약 의심글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 전날 대비')
+    m4.metric(label = '오늘 마약 의심글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 전날 대비', delta_color = 'inverse')
     m1.write('')
      
     # Number of Completed Handovers by Hour
