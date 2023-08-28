@@ -93,7 +93,7 @@ def reset():
 
 st.button('Reset', on_click=reset)
 example_num = random.randrange(1,6)
-st.text_input("", example_dict[example_num]['example'], )
+st.text_input("", example_dict[example_num]['example'], max_chars = 512)
 st.write('추출된 ID : ' + example_dict[example_num]['output'])
 
 
