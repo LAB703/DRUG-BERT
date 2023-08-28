@@ -36,8 +36,7 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 example_lst = ['예시 문장 1', '예시 문장 2', '예시 문장 3' ,'예시 문장 4', '예시 문장 5']
 
 with st.expander("사용된 프롬프트") :
-        st.code('''for e in extracts :
-          prompt = f"""
+        st.code('''
           prompt : 아래의 [extract]에서 텔레그램 아이디를 추출해야합니다. 예시는 [example]와 같습니다. 
         
           [example]
@@ -55,20 +54,7 @@ with st.expander("사용된 프롬프트") :
         
               input : 엑스터시구매-카톡:aky33 텔레:kid333 — '엑스터시,엑스터시판매,엑스터시파는곳,엑스터시사는
               output : kid333
-        
-        
-          [extract]
-          {e}
-        
-          """
-          response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-              {"role": "user",
-              "content": prompt}
-            ]
-          )
-          print(response["choices"][0].message.content)''')
+        ''')
 
 def reset():
     st.session_state.selection = 'Please Select'
