@@ -62,7 +62,7 @@ with st.spinner('Updating Report...'):
     m1.write('')
     m2.metric(label ='전날 대비 증가량',value = str(int(to['Value']))+' 건', delta = str(int(to['Previous']))+', 전날 대비', delta_color = 'inverse')
     m3.metric(label ='가장 최근글',value = str(int(ch['Value']))+" 분 전", delta = str(int(ch['Previous']))+', 1분전', delta_color = 'inverse')
-    m4.metric(label = '현재 위험도 가장 높은 글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 3일전')
+    m4.metric(label = '현재 마약 의심글',value = str(int(hl['Value']))+" 건", delta = str(int(hl['Previous']))+', 3일전')
     m1.write('')
      
     # Number of Completed Handovers by Hour
@@ -101,7 +101,7 @@ with st.spinner('Updating Report...'):
     
     fig.add_scatter(x=fgdf['Arrived Destination Resolved'], y=fgdf['Target'], mode='lines', line=dict(color="white"), name='Target')
     
-    fig.update_layout(title_text="시간별 위험글 현황",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None, legend=dict(orientation="h",yanchor="bottom",y=0.9,xanchor="right",x=0.99))
+    fig.update_layout(title_text="시간별 의심글 현황",title_x=0,margin= dict(l=0,r=10,b=10,t=30), yaxis_title=None, xaxis_title=None, legend=dict(orientation="h",yanchor="bottom",y=0.9,xanchor="right",x=0.99))
     
     g3.plotly_chart(fig, use_container_width=True) 
       
