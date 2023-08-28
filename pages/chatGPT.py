@@ -33,7 +33,7 @@ with st.sidebar:
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 
-example_lst = { 1 : {
+example_dict = { 1 : {
         "example" : '''
 input : 엑스터시 팝니다,카톡【opn6】엑스터시 판매,엑스터시 구매,텔레【opn66】엑스터시 구입,엑스터시 판매사이트. 작성자.
 output :
@@ -93,8 +93,8 @@ def reset():
 
 st.button('Reset', on_click=reset)
 example_num = random.randrange(1,6)
-st.text_input("", example[example_num]['example'])
-st.write('추출된 ID : ' + example[example_num]['output'])
+st.text_input("", example_dict[example_num]['example'])
+st.write('추출된 ID : ' + example_dict[example_num]['output'])
 
 
 @st.cache_data(show_spinner=False)
