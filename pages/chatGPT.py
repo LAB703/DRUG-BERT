@@ -33,7 +33,7 @@ with st.sidebar:
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 st.write('---')
-st.subheader('🆔 아이디 식별기')
+st.subheader('🆔 ChatGPT 아이디 식별기')
 
 example_dict = { 1 : {
         "example" : '''
