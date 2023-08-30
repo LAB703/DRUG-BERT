@@ -98,7 +98,7 @@ st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
 
 
 @st.cache_data(show_spinner=False)
-def is_open_ai_key_valid(openai_api_key) -> bool:
+def is_open_ai_key_valid(openai_api_key, user_input) -> bool:
     if not openai_api_key:
         st.warning("좌측에 OpenAI API key를 입력하시오!")
         return False
@@ -134,4 +134,4 @@ if not run:
 elif not user_input : 
     st.warning("내용을 입력하시오!")
 else :
-    is_open_ai_key_valid(openai_api_key)
+    is_open_ai_key_valid(openai_api_key, user_input)
