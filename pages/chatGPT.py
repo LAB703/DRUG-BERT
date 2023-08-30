@@ -121,7 +121,7 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
               "content": prompt_content}
             ]
           )
-          print(response["choices"][0].message.content)
+        print(response["choices"][0].message.content)
     except Exception as e:
         st.error(f"올바른 OpenAI API key가 아닙니다. 키를 재확인하세요.")
         # logger.error(f"올바른 OpenAI API key가 아닙니다. ")
