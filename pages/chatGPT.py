@@ -22,8 +22,8 @@ with st.sidebar:
             type="password",
             placeholder="OpenAI API key를 입력하세요. (sk-...)",
             help="여기에서 OpenAI API key를 발급받을 수 있습니다. https://platform.openai.com/account/api-keys.",  # noqa: E501
-            value=st.session_state.get("OPENAI_API_KEY", ""),
-                # os.environ.get("OPENAI_API_KEY", None)  # local       
+            value=st.session_state.get("OPENAI_API_KEY", "") or
+                os.environ.get("OPENAI_API_KEY", None)  # local       
         )
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
@@ -122,7 +122,7 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
               "content": prompt_content}
             ]
           )
-        print(response["choices"][0].message.content)
+        st.write(response["choices"][0].message.content)
     except Exception as e:
         st.error(f"올바른 OpenAI API key가 아닙니다. 키를 재확인하세요.")
         # logger.error(f"올바른 OpenAI API key가 아닙니다. ")
