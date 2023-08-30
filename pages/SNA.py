@@ -74,7 +74,7 @@ def app():
 
   if query_type=="Marvel":
     #based on http://marvel-force-chart.surge.sh/
-    with open("./marvel.json", encoding="utf8") as f:
+    with open("data/marvel.json", encoding="utf8") as f:
       marvel_file = json.loads(f.read())
       marvel_store = TripleStore()
       for sub_graph in marvel_file["children"]:
