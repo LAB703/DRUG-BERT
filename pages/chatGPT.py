@@ -108,11 +108,10 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
         st.warning("좌측에 OpenAI API key를 입력하시오!")
         return False
     try:
-        for e in extracts :
-          prompt_content = f""" {prompt}
+        prompt_content = f""" {prompt}
                 
           [extract]
-          {e}
+          {user_input}
         
           """
           response = openai.ChatCompletion.create(
@@ -133,8 +132,10 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
 
 user_input = st.text_area(
     "아이디를 식별하고 싶은 게시글을 입력하세요.",
-        
-)
+    '''input :
+
+    output :      
+''')
 
 if not user_input:
     st.stop()
