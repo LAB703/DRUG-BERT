@@ -50,7 +50,7 @@ with tab2 :
     
     
     fig = go.Figure(
-            data = [go.Table (columnorder = [0,1,2,3], columnwidth = [15,40,20,20],
+            data = [go.Table (columnorder = [0,1,2,3], columnwidth = [15,20,20,20],
                 header = dict(
                  values = list(cwdf.columns),
                  font=dict(size=12, color = 'white'),
