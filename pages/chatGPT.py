@@ -3,6 +3,9 @@ import title
 import openai
 import random
 
+import style
+st.markdown(style.style, unsafe_allow_html=True)
+
 title.header()
 # https://ask-my-pdf.streamlit.app/
 #https://gpt4autocoder.streamlit.app/
