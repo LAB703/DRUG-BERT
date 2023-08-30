@@ -95,12 +95,10 @@ example_num = random.randrange(0,5)
 st.text_area("", example_dict[example_num]['example'])
 st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
 
-
-@st.cache_data(show_spinner=False)
-user_input = st.text_area(
-            "## 아이디가 포함된 게시글을 입력하세요.")
+user_input = st.text_area("## 아이디가 포함된 게시글을 입력하세요.")
 run = st.button('▶ 실행')
 
+@st.cache_data(show_spinner=False)
 def is_open_ai_key_valid(openai_api_key) -> bool:
     if not openai_api_key:
         st.warning("좌측에 OpenAI API key를 입력하시오!")
