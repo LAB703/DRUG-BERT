@@ -131,13 +131,12 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
         return False
     return True
 
-uploaded_file = st.file_uploader(
-    "Upload a csv, txt, or json file",
-    type=["csv", "txt", "json"],
-    help="파일을 업로드 하세요.",
+user_input = st.text_area(
+    "아이디를 식별하고 싶은 게시글을 입력하세요.",
+        
 )
 
-if not uploaded_file:
+if not user_input:
     st.stop()
 else :
     is_open_ai_key_valid(openai_api_key)
