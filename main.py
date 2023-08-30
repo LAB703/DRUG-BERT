@@ -40,6 +40,8 @@ with tab2 :
     drug = pd.read_excel('data/stat.xlsx', sheet_name = '전체')
     st.table(drug)
     hosp = '전체'
+
+    cw1, cw2 = st.columns((2.5, 1.7))
     
     if hosp == '전체':
         cwdf = drug
@@ -64,7 +66,7 @@ with tab2 :
                   height=20))]) 
         
     fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
-        
+    
     cw2.plotly_chart(fig, use_container_width=True)
 #######################################################################################################33
 
