@@ -98,7 +98,7 @@ def reset():
 
 st.button('예시 문장 초기화', on_click=reset)
 example_num = random.randrange(1,6)
-st.text_input("", example_dict[example_num]['example'], max_chars = 512)
+st.text_area("", example_dict[example_num]['example'])
 st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
 
 
