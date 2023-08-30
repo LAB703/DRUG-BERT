@@ -42,7 +42,7 @@ with tab2 :
     hosp = '전체'
     
     if hosp == '전체':
-        cwdf = durg
+        cwdf = drug
     # elif hosp != 'All':
     #     cwdf = cwdf[cwdf['Hospital Attended']==hosp]
     
