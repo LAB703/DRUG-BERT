@@ -49,8 +49,15 @@ button.css-jgupqz.e10mrw3y2 {
     border-radius: 0.75rem;
     transform: scale(0);
 }
-
+div.css-zq5wmm.ezrtsby0 {
+    display: NONE;
+    visibility:hidden;
+}
 button.css-qjjohw.ef3psqc4 {
+    display: NONE;
+    visibility:hidden;
+}
+button.css-17bs7cf.ef3psqc4 {
     display: NONE;
     visibility:hidden;
 }
