@@ -31,7 +31,6 @@ with st.sidebar:
         
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
-st.write(openai_api_key)
 
 st.write('---')
 st.subheader('🆔 ChatGPT 아이디 식별기')
@@ -127,7 +126,7 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
     except Exception as e:
         st.error(f"올바른 OpenAI API key가 아닙니다. 키를 재확인하세요.")
         # logger.error(f"올바른 OpenAI API key가 아닙니다. ")
-        #     st.error(f"{e.__class__.__name__}: {e}")
+        st.error(f"{e.__class__.__name__}: {e}")
         # logger.error(f"{e.__class__.__name__}: {e}")
         return False
     return True
