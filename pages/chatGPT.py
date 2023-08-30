@@ -92,7 +92,7 @@ def reset():
 
 st.button('예시 문장 초기화', on_click=reset)
 example_num = random.randrange(0,5)
-st.text_area("", example_dict[example_num]['example'])
+st.text_area("예시 문장", example_dict[example_num]['example'])
 st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
 
 
@@ -126,7 +126,7 @@ def is_open_ai_key_valid(openai_api_key, user_input) -> bool:
         return False
     return True
         
-user_input = st.text_area("## 아이디가 포함된 게시글을 입력하세요.")
+user_input = st.text_area("아이디가 포함된 게시글을 입력하세요.")
 run = st.button('▶ 실행')
 
 if not run:
