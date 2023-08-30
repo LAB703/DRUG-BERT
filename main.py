@@ -38,7 +38,7 @@ for drug in drug_slang_list :
 
 with tab2 : 
     drug = pd.read_excel('stat.xlsx')
-    print('')
+    st.table(drug)
 
 ## Data
 
