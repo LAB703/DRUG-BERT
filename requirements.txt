@@ -1,11 +1,21 @@
+# main
 streamlit
 pandas
 plotly
 openpyxl
 
+#DRUG-BERT
 torch
 transformers
 torchvision
 nltk
 
+# ChatGPT
 openai
+
+# SNA
+numpy
+htbuilder
+streamlit-agraph==0.0.28
+SPARQLWrapper
+networkx
