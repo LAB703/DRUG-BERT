@@ -14,8 +14,8 @@ with st.sidebar:
         st.markdown(
             "## 사용법\n"
             "1. 🔑 [OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요. \n"  # noqa: E501
-            "2. 📄 구글에서 크롤링된 파일을 입력하세요. \n"
-            "3. 💬 실행을 누르세요.\n"
+            "2. 📄 아이디 식별을 원하는 게시글을 입력하세요. \n"
+            "3. ▶ 실행을 누르세요.\n"
         )
         api_key_input = st.text_input(
             "OpenAI API Key",
@@ -84,7 +84,7 @@ prompt = '''
               output : kid333
         '''
 
-with st.expander("사용된 프롬프트") :
+with st.expander("사용된 프롬프트 보기") :
         st.code(prompt)
 
 def reset():
@@ -127,7 +127,7 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
 
 user_input = st.text_area(
     "## 아이디가 포함된 게시글을 입력하세요.")
-run = st.button('실행')
+run = st.button('▶ 실행')
 
 if not run:
     st.stop()
