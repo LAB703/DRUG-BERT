@@ -129,8 +129,9 @@ user_input = st.text_area(
     "## 아이디가 포함된 게시글을 입력하세요.")
 run = st.button('▶ 실행')
 
-if not run or not user_input:
-    st.warning("내용을 입력하시오!")
+if not run:
     st.stop()
+elif not user_input : 
+    st.warning("내용을 입력하시오!")
 else :
     is_open_ai_key_valid(openai_api_key)
