@@ -22,8 +22,8 @@ with st.sidebar:
             type="password",
             placeholder="OpenAI API key를 입력하세요. (sk-...)",
             help="여기에서 OpenAI API key를 발급받을 수 있습니다. https://platform.openai.com/account/api-keys.",  # noqa: E501
-            value=st.session_state.get("OPENAI_API_KEY", "") or
-                os.environ.get("OPENAI_API_KEY", None)  # local       
+            value=st.session_state.get("OPENAI_API_KEY", "") 
+                # os.environ.get("OPENAI_API_KEY", None)  # local       
         )
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
