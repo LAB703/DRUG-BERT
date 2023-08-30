@@ -60,7 +60,7 @@ with tab2 :
                   values = [cwdf[K].tolist() for K in cwdf.columns], 
                   font=dict(size=12, color='black'),
                   align = 'left',
-                  fill_color=colourcode,
+                  fill_color='white',
                   height=20))]) 
         
     fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
