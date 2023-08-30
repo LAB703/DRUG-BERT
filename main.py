@@ -39,9 +39,10 @@ for drug in drug_slang_list :
 with tab2 : 
     drug = pd.read_excel('data/stat.xlsx', sheet_name = '전체')
     st.table(drug)
+    hosp = '전체'
     
     if hosp == '전체':
-        cwdf = cwdf
+        cwdf = durg
     # elif hosp != 'All':
     #     cwdf = cwdf[cwdf['Hospital Attended']==hosp]
     
