@@ -69,8 +69,8 @@ output :
 "output" : 'fofoice'},
 }
 
-with st.expander("사용된 프롬프트") :
-        st.code('''
+
+prompt = '''
           prompt : 아래의 [extract]에서 텔레그램 아이디를 추출해야합니다. 예시는 [example]와 같습니다. 
         
           [example]
@@ -88,12 +88,15 @@ with st.expander("사용된 프롬프트") :
         
               input : 엑스터시구매-카톡:aky33 텔레:kid333 — '엑스터시,엑스터시판매,엑스터시파는곳,엑스터시사는
               output : kid333
-        ''')
+        '''
+
+with st.expander("사용된 프롬프트") :
+        st.code(prompt)
 
 def reset():
     st.session_state.selection = 'Please Select'
 
-st.button('Reset', on_click=reset)
+st.button('예시 문장 초기화', on_click=reset)
 example_num = random.randrange(1,6)
 st.text_input("", example_dict[example_num]['example'], max_chars = 512)
 st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
@@ -105,11 +108,21 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
         st.warning("좌측에 OpenAI API key를 입력하시오!")
         return False
     try:
-        openai.ChatCompletion.create(
+        for e in extracts :
+          prompt_content = f""" {prompt}
+                
+          [extract]
+          {e}
+        
+          """
+          response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": "test"}],
-            api_key=openai_api_key,
-        )
+            messages=[
+              {"role": "user",
+              "content": prompt_content}
+            ]
+          )
+          print(response["choices"][0].message.content)
     except Exception as e:
         st.error(f"올바른 OpenAI API key가 아닙니다. 키를 재확인하세요.")
         # logger.error(f"올바른 OpenAI API key가 아닙니다. ")
@@ -130,11 +143,11 @@ else :
     is_open_ai_key_valid(openai_api_key)
 
 
-import os
-import openai
+# import os
+# import openai
 
-#openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = "" 
+# #openai.api_key = os.getenv("OPENAI_API_KEY")
+# openai.api_key = "" 
 
 
 extracts = [
