@@ -38,7 +38,7 @@ for drug in drug_slang_list :
 #######################################################################################################33
 with tab2 : 
     drug = pd.read_excel('data/stat.xlsx', sheet_name = '전체')
-    st.table(drug)
+    # st.table(drug)
     hosp = '전체'
 
     cw1, cw2 = st.columns((2.5, 1.7))
