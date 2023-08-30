@@ -31,6 +31,7 @@ with st.sidebar:
         
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
+st.write(openai_api_key)
 
 st.write('---')
 st.subheader('🆔 ChatGPT 아이디 식별기')
