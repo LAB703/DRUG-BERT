@@ -27,7 +27,7 @@ title.header()
 st.subheader('📈📉대시보드 현황판')
 st.write('---')
 
-drug_slang_list = ["대마","대마초", "대마유", "디아제팜", "마리화나","메스암페타민", "몰리", "몰핀", "물봉", "물뽕", "아편", "아이스",  
+drug_slang_list = ["전체", "대마","대마초", "대마유", "디아제팜", "마리화나","메스암페타민", "몰리", "몰핀", "물봉", "물뽕", "아편", "아이스",  
                         "LSD" ,"양귀비", "엑스터시", "엘에스디", "작대기", "코카인", "해시시", "필로폰", "히로뽕", "헤로인", "모르핀"] 
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["📈 전체", "🐦 트위터", "📨 텔레그램", "▶️ 유튜브", "🌌 DC인사이드",  "💀 다크웹",  "🏴‍☠️ 다크웹2"])
@@ -35,10 +35,37 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["📈 전체", "🐦 트위�
 for drug in drug_slang_list :
     print('')
     
-
+#######################################################################################################33
 with tab2 : 
-    drug = pd.read_excel('stat.xlsx')
+    drug = pd.read_excel('data/stat.xlsx', sheet_name = '전체')
     st.table(drug)
+    
+    if hosp == '전체':
+        cwdf = cwdf
+    # elif hosp != 'All':
+    #     cwdf = cwdf[cwdf['Hospital Attended']==hosp]
+    
+    
+    fig = go.Figure(
+            data = [go.Table (columnorder = [0,1,2,3], columnwidth = [15,40,20,20],
+                header = dict(
+                 values = list(cwdf.columns),
+                 font=dict(size=12, color = 'white'),
+                 fill_color = '#264653',
+                 align = 'left',
+                 height=20
+                 )
+              , cells = dict(
+                  values = [cwdf[K].tolist() for K in cwdf.columns], 
+                  font=dict(size=12, color='black'),
+                  align = 'left',
+                  fill_color=colourcode,
+                  height=20))]) 
+        
+    fig.update_layout(title_text="Current Waiting Callsigns",title_font_color = 'white',title_x=0,margin= dict(l=0,r=10,b=10,t=30), height=480)
+        
+    cw2.plotly_chart(fig, use_container_width=True)
+#######################################################################################################33
 
 ## Data
 
@@ -108,6 +135,7 @@ with st.spinner('Updating Report...'):
     cw1, cw2 = st.columns((2.5, 1.7))
     
     whdf = pd.read_excel('DataforMock.xlsx',sheet_name = 'WaitingHandovers')
+    
       
     colourcode = []
                              
