@@ -117,10 +117,8 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
           """
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
-            messages=[
-              {"role": "user",
-              "content": prompt_content}
-            ]
+            messages=[{"role": "user",  "content": prompt_content}],
+            api_key=openai_api_key,
           )
         st.write(response["choices"][0].message.content)
     except Exception as e:
