@@ -113,7 +113,7 @@ def is_open_ai_key_valid(openai_api_key) -> bool:
           [extract]
           {user_input}
         
-          """
+          """,
           response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
