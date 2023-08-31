@@ -55,6 +55,17 @@ with st.sidebar:
         example_num = random.randrange(0,5)
         st.text_area("예시 문장", example_dict[example_num]['example'])
         st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
                 
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
