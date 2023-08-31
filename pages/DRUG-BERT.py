@@ -69,6 +69,8 @@ example_lst = ['마약 칼국수 마약김밥 마약떡볶이 이런 갑판 없�
                 '오후  아고라에서 가져옴   쉬핑이 걸리려나   아 제발 마약 구입할때는 배송시 세관 경찰에 걸려도 문제 없을정도로 계획을 짜라고 병신새끼야 걸릴지 안걸릴지를 걱정하지말고 진짜 뇌에 똥',
                 '이런 이점은 전부 휴식과 충분한 숙면이면 나아지는건데 병신같은영상하나올려서  대마초 폼 미쳤다 이지랄하는새끼들은 없길바란다 가서 쳐자라'
         ]
+
+platform_lst = ['트위터', '텔레그램', '유튜브' ,'DC인사이드']
         
 def reset():
     st.session_state.selection = 'Please Select'
@@ -175,8 +177,9 @@ if 1 : # submitted:
             predicted = st.metric("예측된 결과" , str(sorted_preds[0][0])) 
             Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100 + 30, 1)) + "%"))
 
-            platform_lst = ['트위터', '텔레그램', '유튜브' ,'DC인사이드']
-            st.write('게시글 출처 : :red[' + random.choice(platform_lst) +']')
+            
+            st.write('게시글 출처 : :red[' + platform_lst[example_num] +']')
+            st.button('게시글 확인')
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
          
