@@ -4,7 +4,6 @@ st.markdown(style.style, unsafe_allow_html=True)
 
 from SPARQLWrapper import SPARQLWrapper, JSON
 from streamlit_agraph import agraph, TripleStore, Node, Edge, Config
-from layout import footer
 import json
 
 def get_inspired():
