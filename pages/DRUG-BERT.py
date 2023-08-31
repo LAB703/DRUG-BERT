@@ -63,14 +63,26 @@ def prep_text(text):
 
 
 
+example_lst = ['마약 칼국수 마약김밥 마약떡볶이 이런 갑판 없어졌으면 좋겠다',
+                '아주 뻑가면 감당 안되긴합니다만 정신차리고 보면 배드트립도 재밌어요 즐기세요 그냥 배드 트립은 양보다는 그 순간의 주위환경 영향을 많이 받는거 같습니다 저도 번겪고 지인도 번겪었는데 공통적인 특징은 하이 도중 예상치 못한 어떤 일에 대해서 불안',
+                '오후  아고라에서 가져옴   쉬핑이 걸리려나   아 제발 마약 구입할때는 배송시 세관 경찰에 걸려도 문제 없을정도로 계획을 짜라고 병신새끼야 걸릴지 안걸릴지를 걱정하지말고 진짜 뇌에 똥',
+                '이런 이점은 전부 휴식과 충분한 숙면이면 나아지는건데 병신같은영상하나올려서  대마초 폼 미쳤다 이지랄하는새끼들은 없길바란다 가서 쳐자라'
+        ]
+        
+def reset():
+    st.session_state.selection = 'Please Select'
+        
+    submitted = st.button('예시 문장 초기화', on_click=reset)
+    example_num = random.randrange(0,4)
+    st.text_area("예시 문장", example_lst[example_num])
 
 # Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
 # st.markdown("##### Text Input")
-with st.form(key="my_form"):
-    Text_entry = st.text_area(
-        "Paste or type text in the box below (i.e., input)", max_chars=512
-    )
-    submitted = st.form_submit_button(label="👉 분류 !")
+# with st.form(key="my_form"):
+#     Text_entry = st.text_area(
+#         "Paste or type text in the box below (i.e., input)", max_chars=512
+#     )
+#     submitted = st.form_submit_button(label="👉 분류 !")
 
 if submitted:
 
