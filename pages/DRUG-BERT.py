@@ -77,8 +77,8 @@ if submitted:
     # SDG labels list
 
     label_list = [
+        '🔵 마약 관련 글 비해당',
         '🔴 마약 관련 글 확실',
-        '🔵 마약 관련 글 비해당'
     ]
 
     if Text_entry == "":
@@ -159,8 +159,8 @@ if submitted:
 
         with c3:
             st.header("")
-            predicted = st.metric("예측된 결과" , str(sorted_preds[1][0])) # 첫번째 바꿈
-            Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[1][1] * 100, 1)) + "%"))
+            predicted = st.metric("예측된 결과" , str(sorted_preds[0][0])) 
+            Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
          
