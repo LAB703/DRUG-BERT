@@ -25,6 +25,9 @@ st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar
 import style
 st.markdown(style.style, unsafe_allow_html=True)
 # st.markdown(style.textbox_style,unsafe_allow_html=True)
+
+
+from streamlit_modal import Modal
 ########################################################################################
 
 title.header()
@@ -175,11 +178,15 @@ if 1 : # submitted:
         with c3:
             st.header("")
             predicted = st.metric("예측된 결과" , str(sorted_preds[0][0])) 
-            Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100 + 30, 1)) + "%"))
+            Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
 
-            
+            st.write('')
+            st.write('')
             st.write('게시글 출처 : :red[' + platform_lst[example_num] +']')
-            st.button('게시글 확인')
+            check = st.button('게시글 확인')
+            if check :
+                modal = Modal(key="Demo Key",title="test")
+            
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
          
