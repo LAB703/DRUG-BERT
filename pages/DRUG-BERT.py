@@ -74,7 +74,7 @@ def reset():
         
     submitted = st.button('예시 문장 초기화', on_click=reset)
     example_num = random.randrange(0,4)
-    st.text_area("예시 문장", example_lst[example_num])
+    Text_entry = st.text_area("예시 문장", example_lst[example_num])
 
 # Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
 # st.markdown("##### Text Input")
@@ -84,7 +84,7 @@ def reset():
 #     )
 #     submitted = st.form_submit_button(label="👉 분류 !")
 
-if submitted:
+if 1 : # submitted:
 
     # SDG labels list
 
