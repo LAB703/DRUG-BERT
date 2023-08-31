@@ -79,6 +79,7 @@ def app():
 
   # if query_type=="SNS":
     #based on http://marvel-force-chart.surge.sh/
+  if 1 :
     with open("data/marvel.json", encoding="utf8") as f:
       marvel_file = json.loads(f.read())
       marvel_store = TripleStore()
