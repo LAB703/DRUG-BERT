@@ -66,6 +66,13 @@ with st.sidebar:
         st.write('')
         st.write('')
         st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
                 
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
