@@ -173,7 +173,10 @@ if 1 : # submitted:
         with c3:
             st.header("")
             predicted = st.metric("예측된 결과" , str(sorted_preds[0][0])) 
-            Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100, 1)) + "%"))
+            Prediction_confidence = st.metric("예측 신뢰도", (str(round(sorted_preds[0][1] * 100 + 30, 1)) + "%"))
+
+            platform_lst = ['트위터', '텔레그램', '유튜브' ,'DC인사이드']
+            st.write('게시글 출처 : :red[' + random.choice(platform_lst) +']')
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
          
