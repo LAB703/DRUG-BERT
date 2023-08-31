@@ -2,6 +2,9 @@ import streamlit as st
 import style
 st.markdown(style.style, unsafe_allow_html=True)
 
+with open( "style.css" ) as css:
+    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+
 from SPARQLWrapper import SPARQLWrapper, JSON
 from streamlit_agraph import agraph, TripleStore, Node, Edge, Config
 import json
