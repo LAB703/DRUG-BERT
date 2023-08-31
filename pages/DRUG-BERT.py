@@ -72,9 +72,9 @@ example_lst = ['마약 칼국수 마약김밥 마약떡볶이 이런 갑판 없�
 def reset():
     st.session_state.selection = 'Please Select'
         
-    submitted = st.button('예시 문장 초기화', on_click=reset)
-    example_num = random.randrange(0,4)
-    Text_entry = st.text_area("예시 문장", example_lst[example_num])
+submitted = st.button('예시 문장 초기화', on_click=reset)
+example_num = random.randrange(0,4)
+Text_entry = st.text_area("예시 문장", example_lst[example_num])
 
 # Form to recieve input text ### 여기를 리셋형태로 바꿀 거임 
 # st.markdown("##### Text Input")
