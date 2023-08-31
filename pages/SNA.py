@@ -56,7 +56,7 @@ def get_inspired():
   return store
 
 def app():
-  footer()
+  # footer()
   st.title("Graph Example")
   st.sidebar.title("Welcome")
   query_type = st.sidebar.selectbox("Query Tpye: ", ["Inspirationals", "Marvel"]) # could add more stuff here later on or add other endpoints in the sidebar.
