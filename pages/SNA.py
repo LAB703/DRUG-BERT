@@ -69,15 +69,15 @@ def app():
   query_type = st.selectbox("Query Type: ", ["텔레그램 ID", "SNS"]) # could add more stuff here later on or add other endpoints in the sidebar.
   config = Config(height=600, width=1000, nodeHighlightBehavior=True, highlightColor="#F7A7A6", directed=True, collapsible=True)
 
-  if query_type=="Inspirationals":
-    st.subheader("Inspirationals")
+  if query_type=="텔레그램 ID":
+    st.subheader("텔레그램 ID")
     with st.spinner("Loading data"):
       store = get_inspired()
       # st.write("Nodes loaded: " + str(len(store.getNodes())))
     # st.success("Done")
     agraph(list(store.getNodes()), (store.getEdges() ), config)
 
-  if query_type=="Marvel":
+  if query_type=="SNS":
     #based on http://marvel-force-chart.surge.sh/
     with open("data/marvel.json", encoding="utf8") as f:
       marvel_file = json.loads(f.read())
