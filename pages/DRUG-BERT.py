@@ -25,9 +25,6 @@ st.set_page_config(page_title="Drug Classifier", layout= "wide", initial_sidebar
 import style
 st.markdown(style.style, unsafe_allow_html=True)
 # st.markdown(style.textbox_style,unsafe_allow_html=True)
-
-
-from streamlit_modal import Modal
 ########################################################################################
 
 title.header()
@@ -185,7 +182,8 @@ if 1 : # submitted:
             st.write('게시글 출처 : :red[' + platform_lst[example_num] +']')
             check = st.button('게시글 확인')
             if check :
-                modal = Modal(key="Demo Key",title="test")
+                st.error('아직 지원되지 않습니다!')
+                
             
             
         st.success("성공적으로 분류되었습니다!", icon="✅")
