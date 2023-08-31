@@ -30,29 +30,39 @@ with st.sidebar:
         )
         st.session_state["OPENAI_API_KEY"] = api_key_input
         st.markdown("---")
+
+        example_dict = [{
+        "example" : '엑스터시 팝니다,카톡【opn6】엑스터시 판매,엑스터시 구매,텔레【opn66】엑스터시 구입,엑스터시 판매사이트. 작성자.',
+        "output" : 'opn66'},
+        {
+                "example" : '정품엑스터시판매가격☆카톡:kodak8☆텔레그램:Komen68☆엑스터시온라인직구입방법 ... 엑스타시와 물뽕(GHB) ,고메요 ,프로포폴,졸피뎀 5종류 판매합니다.',
+                "output" : 'Komen68'},
+        {
+                "example" : 'People named 엑스터시 정품 판매 (( 3618.TK )) (( 카톡:app3 )) (( 라인:dpp3w )) (( 텔레그램:bby38 )) 지방 엑스터시 썰 엑스터시 직거래 구입 후기 ... ',
+                "output" : 'bby38'},
+        {
+                "example" : '도리도리판매✩라인wto56✩텔레myy33✩카톡zcc38 라인wto56✩ ... 카톡zcc38✩',
+                "output" : 'myy33'},
+        {
+                "example" : '엑스터시 팝니다 (텔ㄹㅔ@fofoice) 엑스터시팝니다 엑스터시파는곳 ☎ 상담텔레',
+                "output" : 'fofoice'},
+        ]
         
+        def reset():
+            st.session_state.selection = 'Please Select'
+        
+        st.button('예시 문장 초기화', on_click=reset)
+        example_num = random.randrange(0,5)
+        st.text_area("예시 문장", example_dict[example_num]['example'])
+        st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
+                
 
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 st.write('---')
 st.subheader('🆔 ChatGPT 아이디 식별기')
 
-example_dict = [{
-        "example" : '엑스터시 팝니다,카톡【opn6】엑스터시 판매,엑스터시 구매,텔레【opn66】엑스터시 구입,엑스터시 판매사이트. 작성자.',
-        "output" : 'opn66'},
-{
-        "example" : '정품엑스터시판매가격☆카톡:kodak8☆텔레그램:Komen68☆엑스터시온라인직구입방법 ... 엑스타시와 물뽕(GHB) ,고메요 ,프로포폴,졸피뎀 5종류 판매합니다.',
-        "output" : 'Komen68'},
-{
-        "example" : 'People named 엑스터시 정품 판매 (( 3618.TK )) (( 카톡:app3 )) (( 라인:dpp3w )) (( 텔레그램:bby38 )) 지방 엑스터시 썰 엑스터시 직거래 구입 후기 ... ',
-        "output" : 'bby38'},
-{
-        "example" : '도리도리판매✩라인wto56✩텔레myy33✩카톡zcc38 라인wto56✩ ... 카톡zcc38✩',
-        "output" : 'myy33'},
-{
-        "example" : '엑스터시 팝니다 (텔ㄹㅔ@fofoice) 엑스터시팝니다 엑스터시파는곳 ☎ 상담텔레',
-        "output" : 'fofoice'},
-]
+
 
 
 prompt = '''
@@ -78,13 +88,7 @@ prompt = '''
 with st.expander("사용된 프롬프트 보기") :
         st.code(prompt)
 
-def reset():
-    st.session_state.selection = 'Please Select'
 
-st.button('예시 문장 초기화', on_click=reset)
-example_num = random.randrange(0,5)
-st.text_area("예시 문장", example_dict[example_num]['example'])
-st.write('추출된 ID : :red[' + example_dict[example_num]['output'] + ']')
 
 
 
