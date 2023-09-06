@@ -153,7 +153,7 @@ if 1 : # submitted:
                 font=dict(
                     family="Arial",
                     size=15,
-                    color="black"
+                    color="white" # "black"
                 ),
                 autosize=True, # False
                 width=500,
